@@ -1,0 +1,22 @@
+# robots.txt for SunLight Tarot
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow backend and sensitive areas
+Disallow: /backend/
+Disallow: /backend/api/
+Disallow: /backend/config/
+
+# Allow important pages
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/
+
+# Sitemap location (create this later)
+# Sitemap: https://johnmogi.com/sunlight/sitemap.xml
+
+# Crawl delay (optional - prevents aggressive crawling)
+Crawl-delay: 1
