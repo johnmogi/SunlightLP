@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(ls -la \"C:\\Users\\USUARIO\\Documents\\LOCAL\\PROJECTS\\SunLight\\images\\cards\"\" 2>/dev/null || dir \"C:UsersUSUARIODocumentsLOCALPROJECTSSunLightimagescards\"\")",
+      "Bash(where:*)",
+      "Bash(nul)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(del \"c:\\Users\\USUARIO\\Documents\\LOCAL\\PROJECTS\\SunLight\\nul\" 2)",
+      "Bash(rm:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunLight - Tarot & Spiritual Guidance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="top">
+        <nav class="nav">
+            <a href="#top" class="logo">
+                <img src="images/logo-text.png" alt="SunLight" class="logo-img">
+                <span class="logo-project-text" data-i18n="header.projectName">SunLight Project</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon">☰</span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+                <li><a href="#daily-spread" data-i18n="nav.daily">Daily Spread</a></li>
+                <li><a href="#galleries" data-i18n="nav.collections">Collections</a></li>
+                <li><button class="btn btn-header-cta" id="header-updates-btn" data-i18n="cta.joinBtn">Keep Me in the Loop</button></li>
+                <li class="language-switcher">
+                    <button class="lang-btn" id="current-lang">
+                        <span class="lang-icon">🌐</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-option" data-lang="he">🇮🇱 עברית</button>
+                        <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+                        <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Parallax CTA Section -->
+    <section class="parallax-cta" id="cta">
+        <!-- Background Slider -->
+        <div class="parallax-slider">
+            <div class="parallax-slide active" style="background-image: url('images/cards/eather/httpss.mj.runlgIA_7rPojs_open_eyes__6_THE_AWAKENED_ONE__OPENE_f0e90b81-a111-42de-94b3-9ebe3f97ab2c_0.png');"></div>
+            <div class="parallax-slide" style="background-image: url('images/cards/roses/johnmogi_httpss.mj.run4vkYW3V2k8w_the_mother_of_roses_tarot_rou_456c4177-0ebf-4a71-9630-acff7f0e5f5e.png');"></div>
+            <div class="parallax-slide" style="background-image: url('images/cards/eather/9_The_Lighthouse_watercolor_of_vine-wrapped_tower_now_a_light_54192ad2-36ce-4c64-9b70-4af68380e198_3.png');"></div>
+            <div class="parallax-slide" style="background-image: url('images/cards/roses/botanical_celtic_tarot_card_of_The_Blooming_Heart_a_woman_who_96530e43-155d-44b6-84ec-ab3a62de5151_3.png');"></div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="parallax-overlay"></div>
+
+        <!-- CTA Content -->
+        <div class="parallax-content">
+            <h2 class="parallax-title" data-i18n="cta.title">Shape the Sunlight Tarot</h2>
+            <p class="parallax-subtitle" data-i18n="cta.subtitle">A collective, open-source tarot deck in the making. Help us choose the artwork that will guide the final cards.</p>
+            <div class="cta-actions">
+                <a href="#gallery" class="btn btn-cta btn-primary-cta" data-i18n="cta.voteBtn">Vote on Artwork</a>
+            </div>
+
+            <p class="subscribers-count">
+                <span id="subscriber-count">0</span> <span data-i18n="cta.memberCount">community member</span> <span data-i18n="cta.memberSuffix">• Be part of the creation</span>
+            </p>
+
+            <!-- Slider Navigation Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+
+        <!-- Registration Form (Hidden by default) -->
+        <div class="registration-form-container" id="registration-form">
+            <div class="registration-form-content">
+                <button class="close-form" id="close-registration">&times;</button>
+                <h3>Sign Up for Updates</h3>
+                <p>Join the cause - leave us your email and we'll keep you posted on our progress. We promise not to spam you, and you can opt out anytime.</p>
+
+                <form id="full-registration-form">
+                    <!-- Honeypot field (hidden from humans, visible to bots) -->
+                    <div class="honeypot-field" style="position: absolute; left: -9999px;">
+                        <label for="reg-website">Website</label>
+                        <input type="text" id="reg-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-name">Name *</label>
+                        <input type="text" id="reg-name" name="name" required placeholder="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-email">Email *</label>
+                        <input type="email" id="reg-email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="reg-newsletter" name="newsletter" checked>
+                            <span>Send me weekly tarot insights</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">Sign Up</button>
+                </form>
+
+                <div id="registration-message" class="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Tabs -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 data-i18n="about.title">The SunLight Philosophy</h2>
+            <p class="section-description" data-i18n="about.description">A reimagined tarot system based on ancient wisdom and modern understanding</p>
+
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="babylon" data-i18n="aboutTabs.babylon">The Babylon Tower</button>
+                <button class="tab-btn" data-tab="rosetta" data-i18n="aboutTabs.rosetta">The Sun Rosetta</button>
+                <button class="tab-btn" data-tab="transformations" data-i18n="aboutTabs.transformations">Card Transformations</button>
+                <button class="tab-btn" data-tab="enneagram" data-i18n="aboutTabs.enneagram">The Enneagram System</button>
+                <button class="tab-btn" data-tab="fifth" data-i18n="aboutTabs.fifth">The Fifth Element</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content-container">
+                <!-- Babylon Tower Tab -->
+                <div class="tab-content active" id="tab-babylon">
+                    <h3 data-i18n="tabContent.babylonTitle">The Rebuilt Lighthouse</h3>
+                    <div class="philosophy-content">
+                        <p data-i18n="tabContent.babylonP1">The Tower of Babylon reimagined as active lighthouse and vertical paradise. Every crack filled with blooming lavender and climbing roses, inhabitants tending gardens at multiple levels, the bright beacon guiding distant travelers home.</p>
+
+                        <p data-i18n="tabContent.babylonP2">Four angels plant seeds at the foundation. This is destruction becoming creation, ruins as fertile ground, architecture serving collective good rather than individual ambition. The gift of guidance freely given.</p>
+
+                        <div class="highlight-box">
+                            <h4 data-i18n="tabContent.babylonBoxTitle">Key Principles:</h4>
+                            <ul>
+                                <li data-i18n="tabContent.babylonLi1"><strong>Unity Through Diversity:</strong> Multiple interpretations strengthening one truth</li>
+                                <li data-i18n="tabContent.babylonLi2"><strong>Vertical Integration:</strong> Connecting base consciousness to higher awareness</li>
+                                <li data-i18n="tabContent.babylonLi3"><strong>Collective Wisdom:</strong> Building together what cannot stand alone</li>
+                            </ul>
+                        </div>
+
+                        <p data-i18n="tabContent.babylonP3">Where the original tower fell through confusion of language, our deck reunifies through the universal language of symbols. Each card becomes a step in the ascent, a shared tongue that transcends cultural barriers.</p>
+                    </div>
+                </div>
+
+                <!-- Sun Rosetta Tab -->
+                <div class="tab-content" id="tab-rosetta">
+                    <h3 data-i18n="tabContent.rosettaTitle">The Sun Rosetta Stone</h3>
+                    <div class="philosophy-content">
+                        <p data-i18n="tabContent.rosettaP1">The origin card, pure consciousness radiating as golden light. Four angels orbit this central source, each representing one element descending from unity. This is the Rosetta Stone of the entire deck, showing how air, fire, water, and earth emerge from a single radiant awareness.</p>
+
+                        <p data-i18n="tabContent.rosettaP2">When you place the four Ace cards around the Sun card, a profound hidden teaching reveals itself about the true nature and limitations of each element.</p>
+
+                        <p data-i18n="tabContent.rosettaP3">The Sun is pure consciousness, the origin from which four elemental energies descend to become the four Aces—the Seeds of Light. By centering the Sun as our philosophical anchor, we acknowledge that all spiritual systems ultimately point toward enlightenment.</p>
+                    </div>
+                </div>
+
+                <!-- Card Transformations Tab -->
+                <div class="tab-content" id="tab-transformations">
+                    <h3 data-i18n="tabContent.transformationsTitle">Card Transformations</h3>
+                    <div class="philosophy-content">
+                        <p data-i18n="tabContent.transformationsP1">The Sunlight Tarot transforms traditional imagery to create a psychologically healing 'white deck' rather than a fear-based 'black deck.' Where most tarots begin with the Fool's journey from ignorance to wisdom, we begin with the Sun itself.</p>
+
+                        <p data-i18n="tabContent.transformationsP2">Our cards are designed not for fortune-telling but for lucid dreaming and conscious living, transforming dark imagery into empowering symbols that heal rather than frighten. This is tarot as therapeutic tool.</p>
+                    </div>
+                </div>
+
+                <!-- Enneagram System Tab -->
+                <div class="tab-content" id="tab-enneagram">
+                    <h3 data-i18n="tabContent.enneagramTitle">The Enneagram Integration</h3>
+                    <div class="philosophy-content">
+                        <p data-i18n="tabContent.enneagramP1">The Enneagram, an ancient symbol of nine personality types and spiritual paths, forms the structural backbone of the SunLight system. By combining the rich symbolism of tarot cards with the ancient ninefold system, we have restored the original hidden meanings.</p>
+
+                        <p data-i18n="tabContent.enneagramP2">The Enneagram provides the missing key that unlocks the deeper wisdom encoded in traditional tarot imagery, revealing connections that earlier systems could only hint at.</p>
+
+                        <p data-i18n="tabContent.enneagramP3">This integration transforms readings from fortune-telling to personality mapping, from prediction to self-understanding. Each spread becomes a mirror of the soul's current position on its journey.</p>
+                    </div>
+                </div>
+
+                <!-- Fifth Element Tab -->
+                <div class="tab-content" id="tab-fifth">
+                    <h3 data-i18n="tabContent.fifthTitle">The Fifth Element</h3>
+                    <div class="philosophy-content">
+                        <p data-i18n="tabContent.fifthP1">We have elevated the Major Arcana into the Fifth Element - Aether, Spirit, Consciousness itself. This is not merely reorganization but a fundamental reconception of archetypal wisdom.</p>
+
+                        <p data-i18n="tabContent.fifthP2">The Major Arcana IS the Fifth Element - the organizing principle that contains and transcends Air, Fire, Water, and Earth. Consciousness is not separate from matter; it's the medium through which all elements manifest.</p>
+
+                        <p data-i18n="tabContent.fifthP3">The Fifth Element cards describe WHO you are at the level of soul and archetype, while the four elemental suits describe HOW consciousness manifests through thought, will, emotion, and matter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Voting Gallery -->
+    <section id="gallery" class="main-gallery">
+        <div class="container">
+            <h2 data-i18n="gallery.title">Community Gallery</h2>
+            <p class="section-description" data-i18n="gallery.description">Vote for your favorite tarot artwork - Navigate through all cards</p>
+            <div class="gallery-navigation">
+                <button class="nav-btn" id="prev-page">&#10094; <span data-i18n="gallery.previous">Previous</span></button>
+                <span class="page-info"><span data-i18n="gallery.page">Page</span> <span id="current-page">1</span> <span data-i18n="gallery.of">of</span> <span id="total-pages">1</span></span>
+                <button class="nav-btn" id="next-page"><span data-i18n="gallery.next">Next</span> &#10095;</button>
+            </div>
+            <div id="voting-gallery" class="gallery-grid"></div>
+            <div class="gallery-navigation">
+                <button class="nav-btn" id="prev-page-bottom">&#10094; <span data-i18n="gallery.previous">Previous</span></button>
+                <span class="page-info"><span data-i18n="gallery.page">Page</span> <span id="current-page-bottom">1</span> <span data-i18n="gallery.of">of</span> <span id="total-pages-bottom">1</span></span>
+                <button class="nav-btn" id="next-page-bottom"><span data-i18n="gallery.next">Next</span> &#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Double Daily Spread -->
+    <section id="daily-spread" class="daily-spread">
+        <div class="container">
+            <h2 data-i18n="daily.title">Your Double Daily Spread</h2>
+            <p class="section-description" data-i18n="daily.description">Draw your cards for reflection and activation</p>
+            <p class="spread-intro" data-i18n="daily.intro">Take a moment to contemplate the card drawn for you. You can visualize, breathe into, or speak aloud its meaning. If it doesn't resonate - simply draw another card until you find your match.</p>
+
+            <!-- Card Tips Carousel -->
+            <div class="card-tips-container">
+                <button class="tips-nav-btn tips-prev" id="tips-prev">&#10094;</button>
+                <div class="card-tip" id="current-tip">
+                    <span class="tip-icon">💡</span>
+                    <p>Breathe slowly and deeply while gazing at your card</p>
+                </div>
+                <button class="tips-nav-btn tips-next" id="tips-next">&#10095;</button>
+            </div>
+
+            <div class="spread-container">
+                <!-- Reflection Card (Random) -->
+                <div class="card-section">
+                    <h3 data-i18n="daily.reflectionTitle">Reflection Card</h3>
+                    <p class="card-description" data-i18n="daily.reflectionDesc">Randomly selected for contemplation</p>
+                    <div id="reflection-card" class="tarot-card-slot">
+                        <div class="card-back">🌙</div>
+                    </div>
+                    <button id="draw-reflection" class="btn btn-primary" data-i18n="daily.drawBtn">Draw Reflection</button>
+                </div>
+
+                <!-- Activation Card (Choice) -->
+                <div class="card-section">
+                    <h3 data-i18n="daily.activationTitle">Activation Card</h3>
+                    <p class="card-description" data-i18n="daily.activationDesc">Choose your card for action</p>
+                    <div id="activation-card" class="tarot-card-slot">
+                        <div class="card-back">☀️</div>
+                    </div>
+                    <button id="choose-activation" class="btn btn-primary" data-i18n="daily.chooseBtn">Choose Activation</button>
+                </div>
+            </div>
+
+            <!-- Card Selection Modal -->
+            <div id="card-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 data-i18n="daily.modalTitle">Choose Your Activation Card</h3>
+                    <div id="card-selection-grid" class="card-grid"></div>
+                </div>
+            </div>
+
+            <!-- Card Detail Modal (Side-by-Side Layout) -->
+            <div id="card-detail-modal" class="card-detail-modal">
+                <div class="card-detail-content">
+                    <button class="card-detail-close">&times;</button>
+                    <div class="card-detail-layout">
+                        <div class="card-detail-image">
+                            <img id="detail-card-image" src="" alt="">
+                        </div>
+                        <div class="card-detail-info">
+                            <h2 id="detail-card-name"></h2>
+                            <p class="detail-card-type" id="detail-card-type"></p>
+                            <p class="detail-card-meaning" id="detail-card-meaning"></p>
+                            <div class="detail-card-reading" id="detail-card-reading"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Galleries -->
+    <section id="galleries" class="galleries-section">
+        <div class="container">
+            <h2 data-i18n="collections.title">Curated Collections</h2>
+
+            <div class="gallery-collection">
+                <h3 data-i18n="collections.majorTitle">Major Arcana</h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="major-prev">&#10094;</button>
+                    <div class="major-carousel" id="major-arcana-gallery"></div>
+                    <button class="carousel-btn next" id="major-next">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="gallery-collection">
+                <h3 data-i18n="collections.minorTitle">Minor Arcana</h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" id="minor-prev">&#10094;</button>
+                    <div class="minor-carousel" id="minor-arcana-gallery"></div>
+                    <button class="carousel-btn next" id="minor-next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <button class="btn btn-footer-cta" id="footer-updates-btn" data-i18n="cta.joinBtn">Keep Me in the Loop</button>
+            <p data-i18n="footer.copyright">&copy; 2025 SunLight. All rights reserved.</p>
+            <p data-i18n="footer.tagline">Guided by intuition, powered by community</p>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+
+        <div class="lightbox-content">
+            <div class="lightbox-main">
+                <div class="lightbox-image-section">
+                    <img id="lightbox-image" src="" alt="">
+                    <div class="lightbox-info">
+                        <h3 id="lightbox-title"></h3>
+                        <p id="lightbox-meaning"></p>
+                        <p class="lightbox-category" id="lightbox-category"></p>
+                    </div>
+                </div>
+
+                <!-- Comment Section -->
+                <div class="lightbox-comments">
+                    <h4 id="comments-title">Community Discussion</h4>
+                    <div class="comments-list" id="comments-list"><p class="no-comments">Be the first to share your thoughts!</p></div>
+                    <form class="comment-form" id="comment-form">
+                        <!-- Honeypot fields for bot protection -->
+                        <div style="position: absolute; left: -9999px;">
+                            <label for="comment-website">Website</label>
+                            <input type="text" id="comment-website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div style="position: absolute; left: -9999px;">
+                            <label for="comment-phone">Phone</label>
+                            <input type="text" id="comment-phone" name="phone" tabindex="-1" autocomplete="off">
+                        </div>
+                        <!-- Hidden timestamp for time-based validation -->
+                        <input type="hidden" id="comment-timestamp" name="timestamp" value="">
+                        <input type="hidden" id="comment-card-id" value="">
+                        <input type="text" id="comment-name" placeholder="Your name" required maxlength="50">
+                        <textarea id="comment-text" placeholder="Share your thoughts about this card..." required maxlength="500"></textarea>
+                        <div class="comment-form-actions">
+                            <span class="char-count"><span id="char-count">0</span>/500</span>
+                            <button type="submit" class="btn btn-primary" id="submit-comment">Post Comment</button>
+                        </div>
+                    </form>
+                    <div id="comment-message" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox-counter">
+            <span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
