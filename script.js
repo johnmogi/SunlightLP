@@ -850,6 +850,60 @@ class TarotApp {
         document.body.style.overflow = 'auto';
     }
 
+    navigateDetailModal(direction) {
+        if (!this.completeDeckCards || this.completeDeckCards.length === 0) return;
+
+        this.currentDetailIndex += direction;
+
+        // Wrap around
+        if (this.currentDetailIndex < 0) {
+            this.currentDetailIndex = this.completeDeckCards.length - 1;
+        } else if (this.currentDetailIndex >= this.completeDeckCards.length) {
+            this.currentDetailIndex = 0;
+        }
+
+        const card = this.completeDeckCards[this.currentDetailIndex];
+        const cardT = translations[currentLanguage]?.cards || translations.en.cards;
+
+        let cardCategory = '';
+        if (card.type === 'major') {
+            cardCategory = card.number !== undefined
+                ? `${cardT.majorArcana} ${card.number}`
+                : cardT.majorArcana;
+        } else {
+            const suitNames = {
+                'roses': cardT.airMind,
+                'cards': cardT.fireWill,
+                'hearts': cardT.waterEmotion,
+                'coins': cardT.earthMaterial,
+                'eather': cardT.fifthElement || 'Aether'
+            };
+            const suitName = suitNames[card.suit] || card.suit;
+            cardCategory = `${cardT.minorArcana} - ${suitName}`;
+        }
+
+        const reading = this.generateReflectionReading(card);
+
+        // Update modal content
+        const image = document.getElementById('detail-card-image');
+        const name = document.getElementById('detail-card-name');
+        const typeEl = document.getElementById('detail-card-type');
+        const meaning = document.getElementById('detail-card-meaning');
+        const readingEl = document.getElementById('detail-card-reading');
+
+        image.src = `images/updatedCards/${card.image}`;
+        image.alt = card.name;
+        name.textContent = card.name;
+        typeEl.textContent = cardCategory;
+        meaning.textContent = card.meaning;
+
+        let readingContent = `<strong>${cardT.forReflection}</strong><br>${reading}`;
+        if (card.visualDesc) {
+            readingContent = `<p><strong>${cardT.imagery}</strong> ${card.visualDesc}</p>` + readingContent;
+        }
+        readingEl.innerHTML = readingContent;
+    }
+
     generateReflectionReading(card) {
         // Generate contextual reflection reading based on card type and meaning
         if (card.type === 'major') {
@@ -996,6 +1050,25 @@ class TarotApp {
                 }
             });
         }
+
+        // Card detail modal navigation
+        const detailPrev = document.getElementById('detail-prev');
+        const detailNext = document.getElementById('detail-next');
+        if (detailPrev) {
+            detailPrev.addEventListener('click', () => this.navigateDetailModal(-1));
+        }
+        if (detailNext) {
+            detailNext.addEventListener('click', () => this.navigateDetailModal(1));
+        }
+
+        // Keyboard navigation for detail modal
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('card-detail-modal');
+            if (!modal || !modal.classList.contains('active')) return;
+
+            if (e.key === 'ArrowLeft') this.navigateDetailModal(-1);
+            if (e.key === 'ArrowRight') this.navigateDetailModal(1);
+        });
     }
 
     handleVote(imageId) {
@@ -1786,13 +1859,21 @@ class TarotApp {
             }
         }
 
+        // Store filtered cards for modal navigation
+        this.completeDeckCards = cards;
+
         // Get translations
         const cardT = translations[currentLanguage]?.cards || translations.en.cards;
+        const t = translations[currentLanguage]?.voting || translations.en.voting;
 
         // Render cards
-        cards.forEach(card => {
+        cards.forEach((card, index) => {
             const cardEl = document.createElement('div');
             cardEl.className = 'deck-card-item';
+
+            // Get vote data
+            const voteCount = this.votes[card.id] || 0;
+            const hasVoted = this.userVotes[card.id] || false;
 
             // Determine suit display name
             let suitDisplay = '';
@@ -1816,11 +1897,19 @@ class TarotApp {
                 <div class="deck-card-info">
                     <div class="deck-card-name">${card.name}</div>
                     <div class="deck-card-suit">${suitDisplay}</div>
+                    <div class="deck-card-vote">
+                        <button class="vote-btn" data-id="${card.id}" ${hasVoted ? 'disabled' : ''}>
+                            ${hasVoted ? t.voted : t.vote}
+                        </button>
+                        <span class="vote-count">${voteCount} ${t.votes}</span>
+                    </div>
                 </div>
             `;
 
-            // Add click handler to open detail modal
-            cardEl.addEventListener('click', () => {
+            // Add click handler to image to open detail modal
+            const imageDiv = cardEl.querySelector('.deck-card-image');
+            imageDiv.addEventListener('click', () => {
+                this.currentDetailIndex = index;
                 let cardCategory = '';
                 if (card.type === 'major') {
                     cardCategory = card.number !== undefined
@@ -1839,6 +1928,14 @@ class TarotApp {
                 }
                 const reading = this.generateReflectionReading(card);
                 this.openCardDetailModal(card, 'reflection', cardCategory, reading, cardT.forReflection);
+            });
+
+            // Add click handler to vote button
+            const voteBtn = cardEl.querySelector('.vote-btn');
+            voteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.handleVote(card.id);
+                this.renderCompleteDeck(this.currentDeckFilter);
             });
 
             container.appendChild(cardEl);

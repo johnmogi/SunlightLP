@@ -166,8 +166,8 @@ const translations = {
         },
         // Complete Deck Gallery
         completeDeck: {
-            title: "Complete Deck Gallery",
-            description: "Browse all 64 cards in the Sunlight Tarot deck",
+            title: "Sunlight Tarot Deck 0.0.1",
+            description: "The entire deck rebuilt around 5 elements with a new inward journey for the Major Arcana. Explore all cards and vote for your favorites.",
             all: "All",
             aether: "Aether",
             roses: "Roses",
@@ -192,9 +192,9 @@ const translations = {
         },
         // CTA Section
         cta: {
-            title: "עצבו איתנו את טארוט אור-השמש",
-            subtitle: "פרויקט טארוט פתוח שנבנה יחד עם הקהילה.",
-            voteBtn: "הצביעו לעבודות",
+            title: "המדריכה של לילי לטארוט אור-השמש",
+            subtitle: "הגיע הזמן לרפא את חפיסת הטארוט ולחקור גבולות חדשים. לילי היא המדריכה שלכם לחוויית טארוט מחודשת לחלוטין.",
+            voteBtn: "חקרו את החפיסה",
             joinBtn: "עדכנו אותי",
             memberCount: "חבר קהילה",
             memberSuffix: "• אתם חלק מהיצירה"
@@ -342,8 +342,8 @@ const translations = {
         },
         // Complete Deck Gallery
         completeDeck: {
-            title: "גלריית החפיסה המלאה",
-            description: "עיינו בכל 64 הקלפים בחפיסת טארוט אור-השמש",
+            title: "חפיסת טארוט אור-השמש 0.0.1",
+            description: "החפיסה כולה נבנתה מחדש סביב 5 יסודות עם מסע פנימי חדש לארקנה הגדולה. חקרו את כל הקלפים והצביעו למועדפים שלכם.",
             all: "הכל",
             aether: "אתר",
             roses: "ורדים",
@@ -659,4 +659,5 @@ const translations = {
 
 // Export for use in main script
 if (typeof module !== 'undefined' && module.exports) {
-    module.e
+    module.exports = translations;
+}
