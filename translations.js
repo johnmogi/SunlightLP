@@ -16,9 +16,9 @@ const translations = {
         },
         // CTA Section
         cta: {
-            title: "Shape the Sunlight Tarot",
-            subtitle: "A collective, open-source tarot deck in the making. Help us choose the artwork that will guide the final cards.",
-            voteBtn: "Vote on Artwork",
+            title: "Lily's Guide to the Sunlight Tarot",
+            subtitle: "Time to heal the tarot deck and explore new boundaries. Lily is your field guide to a completely reimagined tarot experience.",
+            voteBtn: "Explore the Deck",
             joinBtn: "Keep Me in the Loop",
             memberCount: "community member",
             memberSuffix: "• Be part of the creation"
@@ -41,8 +41,8 @@ const translations = {
         },
         // Gallery Section
         gallery: {
-            title: "Community Gallery",
-            description: "Vote for your favorite tarot artwork - Navigate through all cards",
+            title: "Sunlight Tarot Deck 0.0.1",
+            description: "Explore the complete deck - Navigate through all cards",
             previous: "Previous",
             next: "Next",
             page: "Page",
@@ -72,7 +72,8 @@ const translations = {
         // Footer
         footer: {
             copyright: "© 2025 SunLight. All rights reserved.",
-            tagline: "Guided by intuition, powered by community"
+            tagline: "Guided by intuition, powered by community",
+            collab: "Looking for collaborations? Visit johnmogi.com"
         },
         // Card Readings
         cards: {
@@ -100,7 +101,7 @@ const translations = {
             rosetta: "The Sun Rosetta",
             transformations: "Card Transformations",
             enneagram: "The Enneagram System",
-            fifth: "The Fifth Element"
+            fifth: "The Aether Element"
         },
         // Comments
         comments: {
@@ -146,10 +147,33 @@ const translations = {
             enneagramP1: "The Enneagram, an ancient symbol of nine personality types and spiritual paths, forms the structural backbone of the SunLight system. By combining the rich symbolism of tarot cards with the ancient ninefold system, we have restored the original hidden meanings.",
             enneagramP2: "The Enneagram provides the missing key that unlocks the deeper wisdom encoded in traditional tarot imagery, revealing connections that earlier systems could only hint at.",
             enneagramP3: "This integration transforms readings from fortune-telling to personality mapping, from prediction to self-understanding. Each spread becomes a mirror of the soul's current position on its journey.",
-            fifthTitle: "The Fifth Element",
-            fifthP1: "We have elevated the Major Arcana into the Fifth Element - Aether, Spirit, Consciousness itself. This is not merely reorganization but a fundamental reconception of archetypal wisdom.",
-            fifthP2: "The Major Arcana IS the Fifth Element - the organizing principle that contains and transcends Air, Fire, Water, and Earth. Consciousness is not separate from matter; it's the medium through which all elements manifest.",
-            fifthP3: "The Fifth Element cards describe WHO you are at the level of soul and archetype, while the four elemental suits describe HOW consciousness manifests through thought, will, emotion, and matter."
+            fifthTitle: "The Aether Element",
+            fifthP1: "We have elevated the Major Arcana into the Aether Element - Spirit, Consciousness itself. This is not merely reorganization but a fundamental reconception of archetypal wisdom.",
+            fifthP2: "The Major Arcana IS the Aether Element - the organizing principle that contains and transcends Air, Fire, Water, and Earth. Consciousness is not separate from matter; it's the medium through which all elements manifest.",
+            fifthP3: "The Aether Element cards describe WHO you are at the level of soul and archetype, while the four elemental suits describe HOW consciousness manifests through thought, will, emotion, and matter."
+        },
+        // Scroll Maze Game Preview
+        scrollMaze: {
+            title: "Coming Soon: Scroll Maze",
+            subtitle: "Transform the Sunlight Tarot into a roguelike adventure game",
+            feature1Title: "Dungeon Exploration",
+            feature1Desc: "Lay out cards face-down to create an ever-changing maze. Flip cards to reveal rooms, roll dice to determine encounters.",
+            feature2Title: "Elemental Combat",
+            feature2Desc: "Battle monsters using the five-element system. Water douses fire, fire evaporates water - master the cycles to win.",
+            feature3Title: "Learn Through Play",
+            feature3Desc: "Understanding each card's meaning gives you tactical advantage. Learn tarot through engaging gameplay, not memorization.",
+            stretchGoal: "Stretch goal for our crowdfunding campaign - help us bring this vision to life!"
+        },
+        // Complete Deck Gallery
+        completeDeck: {
+            title: "Complete Deck Gallery",
+            description: "Browse all 64 cards in the Sunlight Tarot deck",
+            all: "All",
+            aether: "Aether",
+            roses: "Roses",
+            cards: "Cards",
+            hearts: "Hearts",
+            coins: "Coins"
         }
     },
 
@@ -193,8 +217,8 @@ const translations = {
         },
         // Gallery Section
         gallery: {
-            title: "גלריית הקהילה",
-            description: "הצביעו לעבודות האומנות המועדפות עליכם - נווטו בין כל הקלפים",
+            title: "חפיסת טארוט אור-השמש 0.0.1",
+            description: "גלו את החפיסה המלאה - נווטו בין כל הקלפים",
             previous: "הקודם",
             next: "הבא",
             page: "עמוד",
@@ -224,7 +248,8 @@ const translations = {
         // Footer
         footer: {
             copyright: ".כל הזכויות שמורות .SunLight © 2025",
-            tagline: "מודרך באינטואיציה, מופעל על ידי הקהילה"
+            tagline: "מודרך באינטואיציה, מופעל על ידי הקהילה",
+            collab: "מחפשים שיתופי פעולה? בקרו ב-johnmogi.com"
         },
         // Card Readings
         cards: {
@@ -252,7 +277,7 @@ const translations = {
             rosetta: "אבן רוזטה השמש",
             transformations: "שינויי קלפים",
             enneagram: "מערכת האניאגרם",
-            fifth: "היסוד החמישי"
+            fifth: "יסוד האתר"
         },
         // Comments
         comments: {
@@ -298,10 +323,33 @@ const translations = {
             enneagramP1: "האניאגרם, סמל עתיק של תשעה טיפוסי אישיות ומסלולים רוחניים, מהווה את עמוד השדרה המבני של מערכת אור-השמש. על ידי שילוב הסמליות העשירה של קלפי טארוט עם המערכת העתיקה בת תשע הנקודות, שחזרנו את המשמעויות הנסתרות המקוריות.",
             enneagramP2: "האניאגרם מספק את המפתח החסר שפותח את החוכמה העמוקה יותר המקודדת בדימויי טארוט מסורתיים, וחושף קשרים שמערכות קודמות יכלו רק לרמז עליהם.",
             enneagramP3: "שילוב זה הופך קריאות מניחוש עתידות למיפוי אישיות, מחיזוי להבנה עצמית. כל פריסה הופכת למראה של מיקום הנשמה הנוכחי במסעה.",
-            fifthTitle: "היסוד החמישי",
-            fifthP1: "העלינו את הארקנה הגדולה ליסוד החמישי - אתר, רוח, תודעה עצמה. זו אינה רק ארגון מחדש אלא תפיסה מחדש יסודית של חוכמה ארכיטיפית.",
-            fifthP2: "הארקנה הגדולה היא היסוד החמישי - העיקרון המארגן שמכיל וחורג מאוויר, אש, מים ואדמה. התודעה אינה נפרדת מהחומר; היא המדיום שדרכו כל היסודות מתגלים.",
-            fifthP3: "קלפי היסוד החמישי מתארים מי אתה ברמת הנשמה והארכיטיפ, בעוד ארבעת סדרות היסודות מתארים כיצד התודעה מתגלה דרך מחשבה, רצון, רגש וחומר."
+            fifthTitle: "יסוד האתר",
+            fifthP1: "העלינו את הארקנה הגדולה ליסוד האתר - רוח, תודעה עצמה. זו אינה רק ארגון מחדש אלא תפיסה מחדש יסודית של חוכמה ארכיטיפית.",
+            fifthP2: "הארקנה הגדולה היא יסוד האתר - העיקרון המארגן שמכיל וחורג מאוויר, אש, מים ואדמה. התודעה אינה נפרדת מהחומר; היא המדיום שדרכו כל היסודות מתגלים.",
+            fifthP3: "קלפי יסוד האתר מתארים מי אתה ברמת הנשמה והארכיטיפ, בעוד ארבעת סדרות היסודות מתארים כיצד התודעה מתגלה דרך מחשבה, רצון, רגש וחומר."
+        },
+        // Scroll Maze Game Preview
+        scrollMaze: {
+            title: "בקרוב: מבוך המגילה",
+            subtitle: "הפכו את טארוט אור-השמש למשחק הרפתקאות רוגלייק",
+            feature1Title: "חקירת מבוך",
+            feature1Desc: "הניחו קלפים הפוכים ליצירת מבוך משתנה. הפכו קלפים לחשיפת חדרים, הטילו קוביות לקביעת מפגשים.",
+            feature2Title: "קרב יסודות",
+            feature2Desc: "הילחמו במפלצות באמצעות מערכת חמשת היסודות. מים מכבים אש, אש מאדה מים - שלטו במחזורים לניצחון.",
+            feature3Title: "למידה דרך משחק",
+            feature3Desc: "הבנת משמעות כל קלף נותנת לכם יתרון טקטי. למדו טארוט דרך משחק מרתק, לא שינון.",
+            stretchGoal: "יעד מורחב לקמפיין המימון ההמוני שלנו - עזרו לנו להגשים את החזון הזה!"
+        },
+        // Complete Deck Gallery
+        completeDeck: {
+            title: "גלריית החפיסה המלאה",
+            description: "עיינו בכל 64 הקלפים בחפיסת טארוט אור-השמש",
+            all: "הכל",
+            aether: "אתר",
+            roses: "ורדים",
+            cards: "קלפים",
+            hearts: "לבבות",
+            coins: "מטבעות"
         }
     },
 
@@ -611,5 +659,4 @@ const translations = {
 
 // Export for use in main script
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = translations;
-}
+    module.e

@@ -11,11 +11,11 @@ const RTL_LANGUAGES = ['he', 'ar'];
 
 // FOLDER STRUCTURE FOR 5 CARD CATEGORIES
 // When ready, organize your cards into these 5 folders:
-// images/cards/major/ - Major Arcana cards
-// images/cards/minor/ - Minor Arcana cards
-// images/cards/court/ - Court cards
-// images/cards/special/ - Special or oracle cards
-// images/cards/featured/ - Featured artwork for voting gallery
+// images/updatedCards/major/ - Major Arcana cards
+// images/updatedCards/minor/ - Minor Arcana cards
+// images/updatedCards/court/ - Court cards
+// images/updatedCards/special/ - Special or oracle cards
+// images/updatedCards/featured/ - Featured artwork for voting gallery
 //
 // Then update the image paths below to include the folder prefix:
 // Example: image: "major/card_name.png" instead of just "card_name.png"
@@ -30,7 +30,7 @@ const TAROT_CARDS = [
     {
         id: 0,
         name: "The Sun",
-        image: "eather/9._Soft_watercolor_tarot_card_four_color-coded_angels_bluegre_7abf56a2-950b-4134-9684-6dba1872f671_3.png",
+        image: "eather/Tarot_card_poster_composition_with_golden_ratio_and_cosmic_sc_b9cf62ad-578a-4a0d-a555-451b6918cf8a_0.png",
         meaning: "Solar consciousness, the illuminating principle that makes all visible",
         visualDesc: "Four cherubic angels dancing in a circle around a radiant sun at center, each angel holds a different symbolic object: roses for air, a mirror-card for fire, a heart for water, a golden coin for earth. Sacred geometry, innocent and joyful, mystical tarot design.",
         type: "major",
@@ -41,7 +41,7 @@ const TAROT_CARDS = [
     {
         id: 1,
         name: "The Night Awakener",
-        image: "eather/httpss.mj.runlgIA_7rPojs_open_eyes__6_THE_AWAKENED_ONE__OPENE_f0e90b81-a111-42de-94b3-9ebe3f97ab2c_0.png",
+        image: "eather/One_The_Night_Awakener_Tarot_card_poster_composition_with_gol_803aa192-d0ee-4dba-b5a0-4077ee696de0_0.png",
         meaning: "Lucid awareness within the dream, power through balance, carrying light into darkness",
         visualDesc: "Young woman half-awake in dream landscape, one eye closed in sleep one eye open with full awareness, holding a journal that exists in both waking and dreaming realms. She stands at the threshold between conscious and unconscious, carries a small light that illuminates the dream. Both in the dream and aware of dreaming.",
         type: "major",
@@ -52,7 +52,7 @@ const TAROT_CARDS = [
     {
         id: 2,
         name: "The Night Dreamer",
-        image: "eather/1_DAYDREAMER_rough_pencil_sketch_barefoot_child_at_crossroads_0ac86743-a2d1-46d8-bda9-03ab71aa5604_2.png",
+        image: "eather/2._Sepia_notebook_paper_aquarelle_moon_reflection_in_birdbath_0b054896-2cd3-48bf-b0ca-3f3a585a8f29_0.png",
         meaning: "Unconscious creative power, shaping reality without awareness",
         visualDesc: "Sleeping figure whose hands gesture in unconscious creation, dreams flowing from their head like smoke becoming landscapes and symbols, creating entire worlds without knowing it. The magician fully asleep, surreal and fluid imagery showing unconscious power, creative chaos.",
         type: "major",
@@ -63,7 +63,7 @@ const TAROT_CARDS = [
     {
         id: 3,
         name: "The Day Dreamer",
-        image: "eather/A_finely_detailed_pencil_sketch_tarot_card_titled_0_-_The_Foo_3b9910ae-6622-4d7d-8d8d-d9cb8131db37_3.png",
+        image: "eather/Three_The_Day_Dreamer_Tarot_card_poster_composition_with_gold_4ad4dff0-ef65-4231-9ace-acbf9f9c564a_0.png",
         meaning: "Lost in mental narrative, identification with ego, missing the present moment",
         visualDesc: "Young figure wandering through beautiful garden with glazed expression, lost in thought and internal narrative, walking past blooming flowers without seeing them, approaching cliff edge while distracted. The sun shines but they walk in their own shadow of thought, showing identification with ego.",
         type: "major",
@@ -85,7 +85,7 @@ const TAROT_CARDS = [
     {
         id: 5,
         name: "The Tree of Life",
-        image: "eather/major_arcana_5_The_Tree_of_Life_white_charcoal_on_black_birdb_80528199-1a10-4b38-ad40-73c090cd568b_0.png",
+        image: "eather/httpss.mj.runduVdS_zEVrY_Five_The_Tree_of_Life_Tarot_card_pos_ef06c6a3-5f30-4552-8bdc-64af35eecdf4_3.png",
         meaning: "Death as transformation not ending, the eternal structure beneath all change",
         visualDesc: "The Kabbalistic Tree of Life with ten glowing spheres (sephiroth) connected by pathways, a figure walking through the tree in transition. Autumn leaves falling while spring buds form simultaneously, showing death as transformation. The eternal structure beneath all change.",
         type: "major",
@@ -107,7 +107,7 @@ const TAROT_CARDS = [
     {
         id: 7,
         name: "The Rebuilt Lighthouse",
-        image: "eather/9_The_Lighthouse_watercolor_of_vine-wrapped_tower_now_a_light_54192ad2-36ce-4c64-9b70-4af68380e198_3.png",
+        image: "eather/httpss.mj.runQNKMjit-wO8_Seven_The_Rebuilt_Lighthouse_Tarot_c_208e1b84-ea54-45ce-8791-6014ce744ddc_2.png",
         meaning: "Destruction becoming creation, ruins as fertile ground, the Tower of Babylon as beacon of hope",
         visualDesc: "The Tower of Babylon rebuilt as a lighthouse and garden, cracks in stone walls filled with blooming lavender and roses, spiral staircases wrapped in vines, light shining from the top as a beacon. Four small angelic figures planting seeds in the foundation. Destruction becoming creation, ruins as fertile ground.",
         type: "major",
@@ -118,7 +118,7 @@ const TAROT_CARDS = [
     {
         id: 8,
         name: "The Merkaba",
-        image: "coins/3._Watercolor_card_spinning_enneagram_wheel_on_notebook_page__ba351551-f1ba-453b-b1ef-f13ad027a275_0.png",
+        image: "eather/Eight_The_Merkaba_-_Improving_the_Chariot_Visuals_Youre_right_231850f7-85dd-4ae5-a476-1a1e74c81379_3.png",
         meaning: "The soul's descent into matter, the Big Bang as personal journey, sacred geometry of transformation",
         visualDesc: "Sacred Merkaba geometry descending through veils of reality, interlocking triangles forming a vehicle of light. Enneagram symbol woven into the structure showing nine points of transformation, a soul entering the chariot knowing it will forget. Layers of dimension suggested by overlapping planes, mystical and mathematical.",
         type: "major",
@@ -129,7 +129,7 @@ const TAROT_CARDS = [
     {
         id: 9,
         name: "The Feminine Creation",
-        image: "eather/tarot_card_embossed_frame_9_The_Pregnant_Source_ebony_deity_i_9989a6b9-f749-44b8-80c0-d118d8ffe72f_2.png",
+        image: "eather/Nine_The_Feminine_Creation_Tarot_card_poster_composition_with_0655e993-daa0-403a-aa09-df44d2cd7c86_1.png",
         meaning: "The abyss before creation, infinite potential, the void that contains everything",
         visualDesc: "Mystical feminine figure dissolving into cosmic darkness, her body contains swirling galaxies and unborn stars. The abyss before creation, sacred feminine as void that contains everything. Sumerian goddess Tiamat merged with Kabbalistic Ein Sof, she is both presence and absence, infinite potential.",
         type: "major",
@@ -142,7 +142,7 @@ const TAROT_CARDS = [
     {
         id: 50,
         name: "Ace of Roses",
-        image: "ace_of_roses.png",
+        image: "roses/tilt-shifted_tarot_card_design_poster_Ace_of_Swords_Excalibur_9cc338bc-a921-466c-90be-64749b2ce6a4_1.png",
         meaning: "Mental power breaking through barriers, clarity as both weapon and beauty",
         visualDesc: "Large cherubic angel stands before the outer wall of the Tower of Babylon, wielding an enormous rose stem like Excalibur. The rose is clearly a weapon here, its stem thick and thorned, but at the top blooms a massive, perfect rose. The angel is breaking through the wall with this rose-sword, showing that even the mind's destructive clarity can create beauty. Debris falls around the angel, but rose petals also scatter in the air.",
         type: "minor",
@@ -151,7 +151,7 @@ const TAROT_CARDS = [
     {
         id: 51,
         name: "Two of Roses",
-        image: "two_of_roses.png",
+        image: "roses/httpss.mj.runRnDEoUliueg_2_of_roses_tarot_card_the_duality_ro_acc4903e-9da6-4732-8547-3bf84182466d_2.png",
         meaning: "Cynical destruction of nature through intellectualization",
         visualDesc: "Two figures stand on either side of a tree stump, and two rose stems are driven into the dead wood unnecessarily, violently. One figure manipulates from behind, shadowy and political. The other figure stands in contemplation, staring at this desecration of nature. The roses themselves are in full bloom despite being used as weapons, creating a disturbing contrast between beauty and cruelty. This shows how thought can be cynical, how we intellectualize our destruction of the living world.",
         type: "minor",
@@ -160,7 +160,7 @@ const TAROT_CARDS = [
     {
         id: 52,
         name: "Three of Roses (The Child of Air)",
-        image: "three_of_roses.png",
+        image: "roses/3_OF_ROSES_-_THE_CHILD_-_Heart_in_Motion_Image_A_young_childs_5f42616d-2449-4f70-8e15-69fe9ecf3241_1.png",
         meaning: "Thought piercing the heart, activating feeling through pain and wonder",
         visualDesc: "Three roses bloom upward from a radiant, beaming heart. The heart glows with golden light, and the roses grow directly from it, their stems emerging like rays. A young person, the Child, stands nearby holding their chest, experiencing this opening with a mixture of pain and wonder. This is the moment when thought pierces the heart, but instead of breaking it, activates it into fuller feeling. The child is performing this experience, showing it to the world with theatrical enthusiasm.",
         type: "minor",
@@ -169,7 +169,7 @@ const TAROT_CARDS = [
     {
         id: 53,
         name: "Four of Roses",
-        image: "four_of_roses.png",
+        image: "roses/pencilink_4_of_Swords_knight_rests_in_luminous_chapel_sword_b_4131c9b3-3223-4739-909a-7b43b05f2a76_2.png",
         meaning: "Mental isolation, rumination, trapped in thorny thoughts",
         visualDesc: "A figure sits alone in contemplation, surrounded by thorny rose stems that have grown up around them like a protective but isolating cage. They're bleeding slightly from small thorn pricks, showing how the mind wounds itself through rumination and anxiety. Through a window or opening, we see a snowy landscape with a garden of wild roses growing, beautiful but cold. The figure stares outward but cannot reach the beauty because they're trapped in their own thorny thoughts. This is melancholic but not hopeless, the roses around them are trying to bloom even in this enclosed space.",
         type: "minor",
@@ -178,7 +178,7 @@ const TAROT_CARDS = [
     {
         id: 54,
         name: "Five of Roses",
-        image: "five_of_roses.png",
+        image: "roses/botanical_celtic_tarot_card_of_The_Blooming_Heart_a_woman_who_87553b1f-01f3-4a32-96e2-687a047ed515_0.png",
         meaning: "Detachment, protecting through distance, understanding without feeling",
         visualDesc: "A figure stands behind or within a wall made entirely of climbing roses, observing the world from safe distance. They're holding a single perfect rose and studying it intensely, analyzing every petal while the rest of life happens beyond their barrier. This is the mind protecting itself through detachment, understanding everything but feeling nothing. The roses create beautiful insulation, but it's still insulation. The figure's expression should be intelligent and sad, aware of what they're missing but unable to step through.",
         type: "minor",
@@ -187,7 +187,7 @@ const TAROT_CARDS = [
     {
         id: 55,
         name: "Six of Roses (The Father of Air)",
-        image: "six_of_roses.png",
+        image: "roses/Tarot_card_poster_composition_with_golden_ratio_young_bearded_d3e3fd89-9f23-4ccd-8a5d-b339d3f10277_0.png",
         meaning: "Exhaustion from intellectual battles, questioning if truth matters more than victory",
         visualDesc: "An older man, the Father, sits exhausted with an enormous rose-sword resting across his lap. He's clearly a veteran of many intellectual battles, his face lined with thought and weariness. Behind him is a field scattered with roses, some trampled, some blooming, the aftermath of countless arguments and debates. He's testing whether truth matters more than victory, whether all this mental combat has actually led anywhere. The rose in his sword is wilting slightly, showing the exhaustion of the analytical mind.",
         type: "minor",
@@ -196,7 +196,7 @@ const TAROT_CARDS = [
     {
         id: 56,
         name: "Seven of Roses",
-        image: "seven_of_roses.png",
+        image: "roses/7_OF_ROSES_-_The_Frozen_Garden_Image_A_solitary_traveler_look_e7f7209c-cbba-4b2e-98ab-595f39951e46_2.png",
         meaning: "Scattered brilliance, intoxicated by ideas without follow-through",
         visualDesc: "A figure runs joyfully through an overgrown rose garden, plucking roses as they go, arms full of blooms but not stopping to appreciate any single one. They're intoxicated by the abundance of ideas and possibilities, the mind freed from consequence. Roses scatter in their wake, some falling and being forgotten. This is brilliant but scattered energy, the pleasure of thinking without the discipline of follow-through. The scene should feel both exhilarating and slightly manic.",
         type: "minor",
@@ -205,7 +205,7 @@ const TAROT_CARDS = [
     {
         id: 57,
         name: "Eight of Roses",
-        image: "eight_of_roses.png",
+        image: "roses/8_OF_ROSES_-_Too_Many_Image_A_woman_kneels_in_a_snow-covered__6d34beae-a2a4-4df0-ad8a-8b934ac7e72c_3.png",
         meaning: "Mental clarity embodied, sharp but not cruel, protective and generative",
         visualDesc: "A warrior figure stands firm, wearing armor made of interwoven rose stems, thorns facing outward. They hold a rose-sword with complete confidence, no longer apologizing for their sharpness. Around them, roses bloom in perfect formation, showing that mental clarity can be both protective and generative. This is the mind fully embodied, able to cut when necessary but without cruelty. The figure's expression should be calm and powerful, neither aggressive nor passive.",
         type: "minor",
@@ -214,7 +214,7 @@ const TAROT_CARDS = [
     {
         id: 58,
         name: "Nine of Roses (The Mother of Air)",
-        image: "nine_of_roses.png",
+        image: "roses/Tarot_card_poster_composition_with_golden_ratio_mature_woman__c9769784-8119-43c3-a197-14ca6cd8b401_3.png",
         meaning: "Wisdom beyond knowledge, seeing there is no enemy, paradox held with grace",
         visualDesc: "A mature woman sits in a powerful but relaxed pose, her rose-sword resting beside her. On the blade sits a red butterfly, clearly visible now because she has learned to see it. Her expression shows she understands there is no enemy, that all the battles were with herself. Behind her is a balanced garden where roses grow wild but harmoniously. She has become wisdom rather than just knowledge, able to hold paradox, sharp enough to distinguish but soft enough to allow.",
         type: "minor",
@@ -227,7 +227,7 @@ const TAROT_CARDS = [
     {
         id: 60,
         name: "Ace of Cards",
-        image: "ace_of_cards.png",
+        image: "cards/Ace_of_CardsTarot_card_poster_composition_with_golden_ratio_s_13bd48f5-5cde-42e6-a8ae-589596e6896c_2.png",
         meaning: "Creative fire transforming obstacles, growing through barriers",
         visualDesc: "A small, humble cherubic angel kneels at the base of a young plant breaking through concrete or stone. A card or small mirror is embedded in the crack where the plant emerges, catching sunlight and reflecting it down into the darkness where the seed first germinated. The angel tends the plant gently, looking at his own reflection in the mirror-card with wonder. This shows that creative fire doesn't destroy obstacles like the Ace of Roses does, it transforms them, grows through them, makes them irrelevant by finding another dimension.",
         type: "minor",
@@ -236,7 +236,7 @@ const TAROT_CARDS = [
     {
         id: 61,
         name: "Two of Cards",
-        image: "two_of_cards.png",
+        image: "cards/Two_of_CardsTarot_card_poster_composition_with_golden_ratio_y_14aaa695-9581-4a24-a035-753b803bea05_2.png",
         meaning: "Negotiating with reality, choosing between possible futures",
         visualDesc: "The figure stands on the Tower of Babylon, holding two cards or mirrors that show different possible futures. He's in negotiation with the world itself, using his reflective tools to understand what choices are actually available. One card might show fire, the other shows earth, representing different paths of manifestation. The figure is contemplative but confident, understanding that creative will requires choosing between possibilities.",
         type: "minor",
@@ -245,7 +245,7 @@ const TAROT_CARDS = [
     {
         id: 62,
         name: "Three of Cards (The Child of Fire)",
-        image: "three_of_cards.png",
+        image: "cards/Three_of_Cards_Child_of_FireFor_the_Three_which_is_the_Child__9023236f-71e1-4dab-997f-3182e16aeaad_0.png",
         meaning: "Performing creativity, scattered potential, everything possible but nothing real yet",
         visualDesc: "A child holds up multiple cards or mirrors to the sky, creating a kaleidoscope of reflections. They're performing their creativity, showing off their ability to see and create multiple perspectives simultaneously. Flames or light rays emanate from the cards, but the child hasn't yet learned to focus this power. Everything is possible, which means nothing is yet real. The enthusiasm is infectious but scattered, the child wants recognition for their potential without yet doing the work of manifestation.",
         type: "minor",
@@ -254,7 +254,7 @@ const TAROT_CARDS = [
     {
         id: 63,
         name: "Four of Cards",
-        image: "four_of_cards.png",
+        image: "cards/httpss.mj.runYBE0XPEJS4c_rough_pencil_sketch_slender_traveler_ebe5897d-18a1-4266-82c1-d198e84b3656_0.png",
         meaning: "Creative blockage, inner fire seeming unreachable",
         visualDesc: "A figure sits surrounded by broken mirrors or torn cards, pieces of failed creative visions scattered around them. They're holding their head, experiencing the wound of creative blockage, the moment when inner fire seems to have gone out. Through a window or opening, we see a distant fire or sunrise, showing that the source is still there, but the figure can't access it. This is the shadow of creative will, the despair that comes when you can't manifest what you see inside.",
         type: "minor",
@@ -263,7 +263,7 @@ const TAROT_CARDS = [
     {
         id: 64,
         name: "Five of Cards",
-        image: "five_of_cards.png",
+        image: "cards/Five_of_CardsTarot_card_poster_composition_with_golden_ratio__5c65e895-cc57-4e53-a6d7-fe2f670933c8_2.png",
         meaning: "Endless preparation without manifestation, documenting but never performing",
         visualDesc: "A figure sits alone in a room filled with journals, scrolls, and cards showing brilliant ideas and visions, but none of them have been brought into the world. They're studying a single card intently, analyzing their own creative process from safe distance. This is creative will turned inward, the artist who prepares forever but never performs, the visionary who documents but never manifests. The room should feel like a beautiful prison of potential.",
         type: "minor",
@@ -272,7 +272,7 @@ const TAROT_CARDS = [
     {
         id: 65,
         name: "Six of Cards (The Father of Fire)",
-        image: "six_of_cards.png",
+        image: "cards/httpss.mj.run35NRUt9RqGg_rough_pencil_sketch_fire_angel_with__b96fb966-50dd-495f-8f40-083573f62e91_1.png",
         meaning: "Testing if creative fire remains, questioning what's left to create",
         visualDesc: "A mature man, the Father, sits before a fire that's burning low, holding a card that shows his younger self at the height of creative power. He's testing whether he still has the fire, whether the visions that drove him once still matter. Around him are completed works, showing he has manifested much, but the question now is whether there's anything left to create or if it's all been done. The card-mirror reflects both his past power and his current doubt.",
         type: "minor",
@@ -281,7 +281,7 @@ const TAROT_CARDS = [
     {
         id: 66,
         name: "Seven of Cards",
-        image: "seven_of_cards.png",
+        image: "cards/httpss.mj.runSBL3DnWbIyE_rough_pencil_sketch_fire_angel_with__61c38e70-1119-494a-ad30-6e15ed1154ab_3.png",
         meaning: "Manic creative energy, starting everything and finishing nothing",
         visualDesc: "A figure juggles multiple cards or mirrors while dancing or running, each one showing a different creative project or possibility. They're intoxicated by the sheer number of things they could create, the freedom of infinite potential. Cards fly through the air, some being caught, some falling and shattering, but the figure doesn't stop to complete any single vision. This is manic creative energy, the artist who starts everything and finishes nothing, brilliant but undisciplined.",
         type: "minor",
@@ -290,7 +290,7 @@ const TAROT_CARDS = [
     {
         id: 67,
         name: "Eight of Cards",
-        image: "eight_of_cards.png",
+        image: "cards/httpss.mj.runY8_2nXN-jrU_pencil_sketch_small_cherubic_angel_w_40e03c11-bff5-4e97-802c-c76d71cee125_3.png",
         meaning: "Creative power fully embodied, vision made solid with consistency",
         visualDesc: "A powerful figure stands holding a large card or mirror that shows their true self, no longer hiding or performing. Around them, creative manifestations bloom into reality, projects completed, visions made solid. The fire of their will is fully embodied, strong and steady rather than scattered. They've claimed their creative power without apology, able to bring inner vision into outer form with consistency and strength. The expression should show both power and peace.",
         type: "minor",
@@ -299,7 +299,7 @@ const TAROT_CARDS = [
     {
         id: 68,
         name: "Nine of Cards (The Mother of Fire)",
-        image: "nine_of_cards.png",
+        image: "cards/Nine_of_Cards_Mother_of_Fire_Tarot_card_poster_composition_wi_f47ffef2-82a4-4d14-a422-c964c77150ad_0.png",
         meaning: "Igniting others' creativity, completed journey now serving as source",
         visualDesc: "A mature woman sits before a fire that's perfectly maintained, neither raging nor dying but steady and warm. She holds a mirror-card that shows not herself but whoever looks at it, offering them the gift of self-reflection. Around her are seeds and small fires, showing that her creative work now is to ignite others, to help them find their own inner fire. She has completed her own creative journey and now serves as source and teacher for others.",
         type: "minor",
@@ -312,7 +312,7 @@ const TAROT_CARDS = [
     {
         id: 70,
         name: "Ace of Hearts",
-        image: "ace_of_hearts.png",
+        image: "hearts/Ace_of_Hearts_The_cherubic_angel_with_pink_robes_and_curly_bl_6dc62db2-22b1-44da-b5a7-e37bacb9b429_0.png",
         meaning: "Emotional yearning, blind to the abundance already present",
         visualDesc: "A large cherubic angel sits inside an enormous heart-shaped vessel or cup, but this cup is made of living flesh, a heart that pulses gently. The angel is trying to fill a tiny cup or chalice from the infinite ocean of emotion surrounding him, but he's so focused on his small need that he doesn't see the abundance he's already within. Dew or water droplets surround him, showing that emotion is everywhere, but he's still reaching, still yearning. This is the seed of emotional need, beautiful but blind.",
         type: "minor",
@@ -321,7 +321,7 @@ const TAROT_CARDS = [
     {
         id: 71,
         name: "Two of Hearts",
-        image: "two_of_hearts.png",
+        image: "hearts/2_of_Cups._Watercolor_card_two_Viking_longships_made_of_noteb_901698f6-55e1-44ea-9b0a-3b0ce2acb25d_1.png",
         meaning: "First emotional exchange, offering hearts with vulnerability and risk",
         visualDesc: "Two figures face each other, each holding their own heart in their hands, offering it to the other. Between them, their hearts begin to pulse in sync, creating a rhythm together. This is the first relationship of the heart, the recognition that emotion flows between beings, that feeling requires exchange. The scene should be intimate and vulnerable, showing both the risk and the beauty of opening to another.",
         type: "minor",
@@ -330,7 +330,7 @@ const TAROT_CARDS = [
     {
         id: 72,
         name: "Three of Hearts (The Child of Water)",
-        image: "three_of_hearts.png",
+        image: "hearts/3_of_Cups._Sepia_aquarelle_three_Atlantean-Viking_women_in_fl_73276995-67f1-491f-ad80-ddc36d4e9722_3.png",
         meaning: "Emotional overflow without containment, performing feelings",
         visualDesc: "A young child plays joyfully with hearts like bubbles or balloons, creating and releasing emotions without attachment. Hearts float around them in various colors, some bursting into light, some drifting away. The child performs their emotional openness, showing everyone how deeply they can feel, but hasn't yet learned that not all feelings need to be expressed, that emotional depth sometimes requires containment. The scene should feel both beautiful and slightly exhausting in its intensity.",
         type: "minor",
@@ -339,7 +339,7 @@ const TAROT_CARDS = [
     {
         id: 73,
         name: "Four of Hearts",
-        image: "four_of_hearts.png",
+        image: "hearts/4_of_Cups._Sepia_aquarelle_boy_on_bedroom_floor_three_cups_fl_5313206f-36ef-4fa2-b885-165ba059f9b1_2.png",
         meaning: "Heartbreak as opening, grief as part of larger cycle",
         visualDesc: "A figure sits alone with a heart that's cracked but still beating, bleeding slowly into a pool around them. They're experiencing the wound of emotion, heartbreak or grief or loss. But in the cracks of the heart, small flowers or light is beginning to grow, suggesting that this breaking is also an opening. Through a window, we can see rain falling on an ocean, showing that their tears are part of a larger cycle. This is melancholic but not hopeless.",
         type: "minor",
@@ -348,7 +348,7 @@ const TAROT_CARDS = [
     {
         id: 74,
         name: "Five of Hearts",
-        image: "five_of_hearts.png",
+        image: "hearts/5_of_Cups._Sepia_aquarelle_boy_looking_at_three_spilled_cups__1b8b320d-6364-40ab-8202-6e4b5b5b60bd_0.png",
         meaning: "Emotional numbness, protecting by freezing",
         visualDesc: "A figure stands behind a wall or barrier made of frozen hearts, protecting themselves from feeling by numbing out. They hold one heart and study it analytically, trying to understand emotion from safe distance rather than experiencing it. The frozen hearts are beautiful like ice crystals but lifeless. Through cracks in the wall, we can see warm light and flowing water, showing what they're missing, but they're not ready to melt the barrier yet.",
         type: "minor",
@@ -357,7 +357,7 @@ const TAROT_CARDS = [
     {
         id: 75,
         name: "Six of Hearts (The Father of Water)",
-        image: "six_of_hearts.png",
+        image: "hearts/6._Sepia_notebook_paper_aquarelle_boy_looking_at_three_spille_5c706c23-15f0-4b3a-bde8-d50339e622e4_2.png",
         meaning: "Questioning emotional capacity after a lifetime of feeling",
         visualDesc: "A mature man, the Father, sits before a still pool or lake, holding a heart that's full but heavy. He's testing whether he still has the capacity to feel deeply, or if all the emotions of his life have exhausted him. Around him are vessels and cups showing past relationships, past joys and sorrows, but the question is whether he can feel new things or if he's simply going through familiar emotional patterns. His reflection in the water shows a younger self, reminding him of when feeling was easy.",
         type: "minor",
@@ -366,7 +366,7 @@ const TAROT_CARDS = [
     {
         id: 76,
         name: "Seven of Hearts",
-        image: "seven_of_hearts.png",
+        image: "hearts/7._Sepia_notebook_paper_aquarelle_boy_on_bedroom_floor_three__06404153-fb69-40a7-ad5f-723868d80e99_0.png",
         meaning: "Emotional excess, addicted to feeling, unable to bear emptiness",
         visualDesc: "A figure runs through a landscape where hearts rain from the sky like flowers or confetti, catching them wildly, intoxicated by the abundance of feeling and connection available. They're trying to experience everything at once, every emotion, every relationship, every possibility of love. Hearts pile around their feet, more than they can possibly hold, but they keep reaching for more. This is emotional excess, the addict of feeling who can't bear any moment of emptiness.",
         type: "minor",
@@ -375,7 +375,7 @@ const TAROT_CARDS = [
     {
         id: 77,
         name: "Eight of Hearts",
-        image: "eight_of_hearts.png",
+        image: "hearts/8_of_Cups._Sepia_aquarelle_boy_walking_away_from_eight_cups_n_4060fdf9-8c78-4752-a13a-e8d76038f5d7_3.png",
         meaning: "Feeling deeply without drowning, emotional intelligence embodied",
         visualDesc: "A powerful figure stands with their heart fully open, glowing with steady light. Around them, emotion flows freely without drowning them, like streams and rivers moving through a landscape. They've learned to feel deeply without being overwhelmed, to open without losing themselves. The heart they hold shows channels and pathways, suggesting emotional intelligence, the ability to direct feeling with awareness and strength.",
         type: "minor",
@@ -384,7 +384,7 @@ const TAROT_CARDS = [
     {
         id: 78,
         name: "Nine of Hearts (The Mother of Water)",
-        image: "nine_of_hearts.png",
+        image: "hearts/botanical_celtic_tarot_card_of_The_Blooming_Heart_a_woman_who_ad3a2b60-b1b8-414f-a44d-1fb55ebf4fe2_0.png",
         meaning: "Source of compassion, heart regenerates through giving",
         visualDesc: "A mature woman sits beside a spring or fountain where hearts emerge like water from the source. She holds a heart and offers it outward, showing that her emotional work now is to nourish others, to be a source of compassion and understanding. Around her, plants and flowers bloom fed by the emotional waters she provides. She has learned that the heart regenerates through giving, that the more love you offer, the more you have to offer.",
         type: "minor",
@@ -397,7 +397,7 @@ const TAROT_CARDS = [
     {
         id: 80,
         name: "Ace of Coins",
-        image: "ace_of_coins.png",
+        image: "coins/oil_impasto_tarot_card_Ace_of_Ennagrams_content_angel_in_saff_3f30a5fa-5455-4944-865e-ebe5ce16175a_0.png",
         meaning: "Matter and spirit unified, completion found, teaching the secret",
         visualDesc: "A cherubic angel holds a coin that is itself a miniature sun, a perfect circle of golden light. The angel is large and centered, having found completion, and he points outward with his free hand, teaching others the secret he's discovered. The coin glows with the same light as the Sun card, showing that matter and spirit are one. Around him, the four elements appear in balance, showing that he understands how to work with all aspects of manifestation. This is the resolution to all the other Aces' struggles.",
         type: "minor",
@@ -406,7 +406,7 @@ const TAROT_CARDS = [
     {
         id: 81,
         name: "Two of Coins",
-        image: "two_of_coins.png",
+        image: "coins/oil_impasto_tarot_2_of_Ennagrams_juggler_in_yellow_robe_balan_4dd01314-d316-46f7-ac95-1082d19b9cc9_1.png",
         meaning: "Constant negotiation between material demands, dynamic balance",
         visualDesc: "A figure juggles or balances two coins, representing the constant negotiation between different material demands, different projects, different responsibilities. The coins might show different faces or symbols, suggesting choice between paths. The figure is in motion, dancing or moving to maintain the balance, showing that material life requires constant adjustment. Behind them, we might see a wheel or infinity symbol, suggesting the cyclical nature of gain and loss.",
         type: "minor",
@@ -415,7 +415,7 @@ const TAROT_CARDS = [
     {
         id: 82,
         name: "Three of Coins (The Child of Earth)",
-        image: "three_of_coins.png",
+        image: "coins/top-down_felt_tarot_Prince_of_Ennagrams_felt_youth_studies_cl_2d2639bf-61f9-4575-aa12-5be9f2ed3b70_2.png",
         meaning: "Eager apprentice, performing competence before mastery",
         visualDesc: "A young child or apprentice works enthusiastically on creating something material, surrounded by coins, tools, and materials. They're showing off their skill to others, performing their competence, eager for recognition. The work is good but not yet masterful, the enthusiasm is endearing but also exhausting. They haven't yet learned that craft requires patience, that mastery comes through years of private work rather than public performance.",
         type: "minor",
@@ -424,7 +424,7 @@ const TAROT_CARDS = [
     {
         id: 83,
         name: "Four of Coins",
-        image: "four_of_coins.png",
+        image: "coins/httpss.mj.run4L9k2uTeqP8_pencil_sketch_figure_with_yellow_rob_c9980020-6d7e-4597-b6e7-44fc4d950d99_0.png",
         meaning: "Hoarding from fear, surrounded by abundance but experiencing scarcity",
         visualDesc: "A figure sits clutching coins to their chest, protecting what they have, afraid to spend or share or risk. They're surrounded by abundance but experiencing scarcity, holding so tightly that the coins begin to dig into their flesh painfully. Through a window or opening, we see a marketplace or community where exchange happens freely, showing what they're missing by hoarding. This is the wound of materialism, the poverty that comes from fear of loss.",
         type: "minor",
@@ -433,7 +433,7 @@ const TAROT_CARDS = [
     {
         id: 84,
         name: "Five of Coins",
-        image: "five_of_coins.png",
+        image: "coins/garden_spread_left_Black_Soil_Womb_black_earth_void_gold_seed_8f77be8d-edb0-44fe-9a7b-75a973c7e731_0.png",
         meaning: "Poverty mindset creating poverty, barrier more psychological than real",
         visualDesc: "A figure stands outside in cold or poverty, looking through a window at warmth and abundance inside. They're holding a few coins but not enough, experiencing material lack. However, the door beside the window is unlocked or even slightly open, suggesting that the barrier is more psychological than real. This is material consciousness protecting itself through the belief in limitation, the poverty mindset that creates actual poverty.",
         type: "minor",
@@ -442,7 +442,7 @@ const TAROT_CARDS = [
     {
         id: 85,
         name: "Six of Coins (The Father of Earth)",
-        image: "six_of_coins.png",
+        image: "coins/oil_couture_10_The_Wheel_of_Fortune_Reborn_model_spins_9-poin_acebd871-f918-4e5f-80e2-002801cdecb5_2.png",
         meaning: "Achieved prosperity questioning if matter provides meaning",
         visualDesc: "A mature man, the Father, sits weighing coins in scales or sorting through material wealth, trying to determine what's enough. He's achieved material success but questioning what it means, whether all this accumulation has brought satisfaction. Around him are storehouses and accounts showing his prosperity, but his expression suggests he's testing whether matter itself can provide meaning, or if he needs something beyond the material.",
         type: "minor",
@@ -451,7 +451,7 @@ const TAROT_CARDS = [
     {
         id: 86,
         name: "Seven of Coins",
-        image: "seven_of_coins.png",
+        image: "coins/oil_impasto_tarot_710_merged_gardener_assesses_seven_loaves_o_b0b31d7a-ddc9-4191-96f3-39747c42fc0c_1.png",
         meaning: "Restless accumulation, addiction to becoming rather than being",
         visualDesc: "A figure stands in a garden or field where coins grow like fruit on trees or plants, surrounded by abundance but unable to enjoy it because they're already planning the next harvest, the next project, the next accumulation. They hold coins in their hands but they're looking ahead rather than appreciating what they have. This is the restlessness of material consciousness, the addiction to becoming rather than being.",
         type: "minor",
@@ -460,7 +460,7 @@ const TAROT_CARDS = [
     {
         id: 87,
         name: "Eight of Coins",
-        image: "eight_of_coins.png",
+        image: "coins/tilt-shift_tarot_Prince_of_Ennagrams_wool_youth_studies_clay__b95f54af-b39d-418e-b539-87d10bebf376_0.png",
         meaning: "Material mastery through craft, work as meditation",
         visualDesc: "A craftsperson works intently on creating something of material beauty and value, completely absorbed in their work. Around them are completed projects showing mastery developed through years of practice. They hold a coin or tool with perfect confidence, embodying the power to manifest, to bring inner vision into material form with skill and dedication. The work itself becomes meditation, the material becomes spiritual through attention and craft.",
         type: "minor",
@@ -469,7 +469,7 @@ const TAROT_CARDS = [
     {
         id: 88,
         name: "Nine of Coins (The Mother of Earth)",
-        image: "nine_of_coins.png",
+        image: "coins/top-down_felt_tarot_Queen_of_Ennagrams_felt_queen_cradles_cla_63fa695d-9b84-416e-9949-b32648a5397b_0.png",
         meaning: "Material abundance through giving, garden of generosity",
         visualDesc: "A mature woman stands in a garden of abundance that she has cultivated, surrounded by growing things, animals, coins appearing as fruits or flowers. She holds a coin and offers it freely, having learned that material wealth is meant to flow, to nourish, to be shared. The garden around her is generous and overflowing, showing that she has become a source of material sustenance for others. She embodies the principle that giving creates more than keeping.",
         type: "minor",
@@ -479,19 +479,19 @@ const TAROT_CARDS = [
     // ========== ADDITIONAL EATHER CARDS (Fifth Element - Major Arcana & Special) ==========
     { id: 10, name: "The Hermit", image: "eather/An_illustration_for_The_Hermit_card_in_the_Space_Tarot_deck_i_76a2356e-3b32-41b3-a130-44900aef1771_1.png", meaning: "Soul searching, introspection, guidance", type: "major" },
     { id: 11, name: "The Continuum", image: "eather/major_arcana_6_The_Continuum_white_charcoal_flow_figure_walks_f92ed6e5-e4e8-4bbd-82da-568db87f4fe0_1.png", meaning: "Flow, eternal movement, continuity of life", type: "major" },
-    { id: 12, name: "The Awakened One (Variant)", image: "eather/_6_THE_AWAKENED_ONE_REVISED_THIS_is_one_of_the_cards_you_aske_453eb4c5-3733-4c1b-bcae-7944d402a3cc_3.png", meaning: "Enlightenment, wisdom, spiritual awakening", type: "major" },
+    { id: 12, name: "The Awakened One (Variant)", image: "eather/httpss.mj.runKnMaqpni1A0_open_eyes__6_THE_AWAKENED_ONE__OPENE_7723b72b-c9b6-4a29-af53-feb4a0bb53b3_1.png", meaning: "Enlightenment, wisdom, spiritual awakening", type: "major" },
     { id: 15, name: "The Recorder", image: "eather/tilt_shited_tarot_card_feltic_frame_of_major_arcane_2_THE_REC_f9aa4b14-be15-4fa7-9759-8a4ed7ef216b_3.png", meaning: "Memory, documentation, witness to truth", type: "major" },
     { id: 16, name: "The Revealed Path", image: "eather/fused_tarot_VI_The_Revealed_Path_lightning_strikes_tree_fruit_8c709a6c-533b-4bba-87d3-38bac41ba2a6_2.png", meaning: "Sudden revelation, clarity, divine guidance", type: "major" },
     { id: 18, name: "Nine Winds", image: "eather/air-brushed_on_night_sky_luminous_nine_wind_faces_transformin_21661ae7-aab0-4417-a61b-3b4acf6563ed_3.png", meaning: "Change, transformation, spiritual currents", type: "major" },
-    { id: 23, name: "Queen of Swords", image: "eather/httpss.mj.run0oTCPrHhI8U_pencilink_Queen_of_Swords_queen_rele_bcfe6371-06d4-477d-9919-94b653f6e7bf_3.png", meaning: "Clear thinking, direct communication, independence", type: "minor", suit: "roses" },
+    { id: 23, name: "Queen of Swords", image: "roses/Queen_of_Swords._Sepia_bold_tattoo_misoriented_queen_with_but_d21f5288-582c-4ac4-9581-f7bcebc2a716_3.png", meaning: "Clear thinking, direct communication, independence", type: "minor", suit: "roses" },
     { id: 33, name: "Young Seeker", image: "eather/tilt-shift_graphite_sketch_confident_B4_pencil_young_adult_fe_ac9456cc-b7c9-45b5-94ce-31dade44c7b3_3.png", meaning: "Youthful determination, seeking truth, confidence", type: "minor", suit: "eather" },
     { id: 34, name: "The Confident One", image: "eather/httpss.mj.runwUcEVSWB_qs_tilt-shift_graphite_sketch_confident_97c975fc-bd94-498b-a709-5b68c09f3802_3.png", meaning: "Self-assurance, inner strength, presence", type: "minor", suit: "eather" },
-    { id: 37, name: "Watercolor Bloom", image: "eather/johnmogi_httpss.mj.runEDwVzo7OH-Y_masterpiece_oil-rich_waterc_d58f6988-4cd2-462c-8648-8041e489f5d7_1.png", meaning: "Artistic expression, beauty unfolding, creativity", type: "minor", suit: "eather" },
-    { id: 38, name: "The Seeker's Path", image: "eather/johnmogi_httpss.mj.runnNiR6Q3sBjM_tilt-shift_graphite_sketch_co_b98d8830-89bb-4f87-a6ca-b5d22222d56c.png", meaning: "Journey, focused intention, determined steps", type: "minor", suit: "eather" },
-    { id: 39, name: "The Nurturer", image: "eather/johnmogi_httpss.mj.runVX2UInPNUvA_tarot_card_embossed_frame_9_756e19a7-514e-4285-9a2d-24bb1dcab414_1.png", meaning: "Care, protection, maternal energy", type: "minor", suit: "eather" },
+    { id: 37, name: "Watercolor Bloom", image: "eather/masterpiece_oil-rich_watercolor_and_heavy_oil_pastel_painting_76a39968-0af9-4218-9257-336091270124_2.png", meaning: "Artistic expression, beauty unfolding, creativity", type: "minor", suit: "eather" },
+    { id: 38, name: "The Seeker's Path", image: "eather/httpss.mj.runnNiR6Q3sBjM_tilt-shift_graphite_sketch_confident_32c15575-dc13-44d5-8bc1-770556d9c658_1.png", meaning: "Journey, focused intention, determined steps", type: "minor", suit: "eather" },
+    { id: 39, name: "The Nurturer", image: "eather/httpss.mj.rungeWV77Oe6f4_tarot_card_embossed_frame_9_The_Preg_599c259e-c56a-40fc-92a1-716d3a972778_2.png", meaning: "Care, protection, maternal energy", type: "minor", suit: "eather" },
     { id: 41, name: "The Blueprint", image: "eather/White_charcoal_blueprint_sketch_on_black_paper_tarot_card_0.__2b477e16-c6be-4c5d-8637-494cf13923d7_0.png", meaning: "Planning, design, divine architecture", type: "minor", suit: "eather" },
     { id: 43, name: "The Lovers Judgment", image: "eather/httpss.mj.runInt8YuJmJ9Y_fused_tarot_VI_The_Lovers-Judgment_a_1e7a794b-9193-417d-ae76-64e18b59d409_1.png", meaning: "Relationship reckoning, love's truth, union tested", type: "minor", suit: "eather" },
-    { id: 44, name: "Pregnant Source Variant", image: "eather/httpss.mj.runShiPrFt5uhs_tarot_card_embossed_frame_9_The_Preg_5dd3bd2c-bdf3-4697-bc04-4daf0dd45d2b_0.png", meaning: "Creation power, divine pregnancy, manifestation", type: "minor", suit: "eather" },
+    { id: 44, name: "Pregnant Source Variant", image: "eather/tarot_card_embossed_frame_9_The_Pregnant_Source_ebony_deity_i_10951f56-5cfa-4dac-9095-10e63d3bf07d_1.png", meaning: "Creation power, divine pregnancy, manifestation", type: "minor", suit: "eather" },
     { id: 45, name: "Tree of Life Sapling", image: "eather/major_arcana_6_The_Tree_of_Life_white_charcoal_birdbath_sapli_c41e2121-9f57-47e9-aa7c-b47016bf80df_1.png", meaning: "New growth, young wisdom, sprouting potential", type: "minor", suit: "eather" },
     { id: 46, name: "Four Angels Variant", image: "eather/9._Soft_watercolor_tarot_card_four_color-coded_angels_bluegre_dea97083-3fed-40f4-ba32-818e946dcc5c_2.png", meaning: "Elemental harmony, divine messengers, balance", type: "minor", suit: "eather" },
     { id: 47, name: "Daydreamer Variant", image: "eather/1_DAYDREAMER_rough_pencil_sketch_barefoot_child_at_crossroads_1151075d-2415-44e7-83a7-77090bc89790_3.png", meaning: "Choices, innocent wonder, life's crossroads", type: "minor", suit: "eather" },
@@ -499,26 +499,26 @@ const TAROT_CARDS = [
 
     // ========== ROSES SUIT (Air/Mind) - Existing Cards ==========
     { id: 26, name: "Butterfly Queen", image: "roses/drum_skin_flash_fine_ink_queen_crouched_on_hide_butterfly_mer_1ea01c00-9b77-42f3-8a5c-126a608a47cf_1.png", meaning: "Transformation, grace, delicate power", type: "minor", suit: "roses" },
-    { id: 28, name: "Two of Roses", image: "roses/httpss.mj.runRnDEoUliueg_2_of_roses_tarot_card_the_duality_ro_acc4903e-9da6-4732-8547-3bf84182466d_2.png", meaning: "Duality, partnership, balanced love", type: "minor", suit: "roses" },
-    { id: 31, name: "Mother of Roses", image: "roses/johnmogi_httpss.mj.run4vkYW3V2k8w_the_mother_of_roses_tarot_rou_456c4177-0ebf-4a71-9630-acff7f0e5f5e.png", meaning: "Nurturing love, compassion, fertile heart", type: "minor", suit: "roses" },
-    { id: 36, name: "Slender Tower", image: "roses/johnmogi_httpss.mj.runYBE0XPEJS4c_rough_pencil_sketch_slender_t_5dd9a459-8ce2-4ce4-96e6-a26b18f63f3c.png", meaning: "Isolation, perspective, reaching upward", type: "minor", suit: "roses" },
-    { id: 40, name: "Rose Mother Variant", image: "roses/johnmogi_httpss.mj.runx9ffY7VfPc0_the_mother_of_roses_tarot_rou_2c659976-a988-487d-9858-92e87221e518.png", meaning: "Abundant love, generosity, blooming heart", type: "minor", suit: "roses" },
+    { id: 28, name: "Two of Roses Variant", image: "roses/2_of_Swords._Sepia_parchment_ink_tattoo_blindfolded_boy_balan_f41a145e-b6cc-40f5-bd1a-799ede39e5c7_1.png", meaning: "Duality, partnership, balanced love", type: "minor", suit: "roses" },
+    { id: 31, name: "Mother of Roses", image: "roses/httpss.mj.runK-JWw3DBga8_the_mother_of_roses_tarot_rough_penc_8fea4d36-02db-4c54-8d74-0768934ebbab_3.png", meaning: "Nurturing love, compassion, fertile heart", type: "minor", suit: "roses" },
+    { id: 36, name: "Slender Tower", image: "roses/httpss.mj.run-lsPomIFTrU_rough_pencil_sketch_dual-faced_chara_671f0110-cbb3-4552-b451-7cd33aa2e49a_0.png", meaning: "Isolation, perspective, reaching upward", type: "minor", suit: "roses" },
+    { id: 40, name: "Rose Mother Variant", image: "roses/httpss.mj.runx9ffY7VfPc0_the_mother_of_roses_tarot_rough_penc_5ddb0115-915c-4b09-a388-431e7d11702f_2.png", meaning: "Abundant love, generosity, blooming heart", type: "minor", suit: "roses" },
     { id: 14, name: "The Blooming Heart", image: "roses/botanical_celtic_tarot_card_of_The_Blooming_Heart_a_woman_who_96530e43-155d-44b6-84ec-ab3a62de5151_3.png", meaning: "Love opening, emotional growth, compassion", type: "major", suit: "roses" },
 
     // ========== CARDS SUIT (Fire/Will) - Existing Cards ==========
-    { id: 20, name: "Fire and Reflection", image: "cards/johnmogi_httpss.mj.runSBL3DnWbIyE_rough_pencil_sketch_fire_an_61c38e70-1119-494a-ad30-6e15ed1154ab_3.png", meaning: "Passion meeting wisdom, transformation", type: "major", suit: "cards" },
-    { id: 21, name: "The Black Soil Womb", image: "cards/garden_spread_left_Black_Soil_Womb_black_earth_void_gold_seed_8f77be8d-edb0-44fe-9a7b-75a973c7e731_0.png", meaning: "Fertile void, potential, dark goddess energy", type: "major", suit: "cards" },
+    { id: 20, name: "Fire and Reflection", image: "cards/httpss.mj.runSBL3DnWbIyE_rough_pencil_sketch_fire_angel_with__61c38e70-1119-494a-ad30-6e15ed1154ab_3.png", meaning: "Passion meeting wisdom, transformation", type: "major", suit: "cards" },
+    { id: 21, name: "The Black Soil Womb", image: "cards/fused_tarot_VI_The_Revealed_Path_lightning_strikes_tree_fruit_32011d09-e57c-41c9-8c97-b7354b85a188_0.png", meaning: "Fertile void, potential, dark goddess energy", type: "major", suit: "cards" },
 
     // ========== HEARTS SUIT (Water/Emotion) - Existing Cards ==========
     { id: 27, name: "Prince of Cups", image: "hearts/Prince_of_Cups._Watercolor_card_young_Viking_explorer_in_pape_502701c2-1b0e-4882-b649-a3fd599037b0_1.png", meaning: "Emotional exploration, romantic idealism, adventure", type: "minor", suit: "hearts" },
     { id: 29, name: "Two of Ships", image: "hearts/soft_watercolor_tarot_card_sepia_paper_two_Viking_longships_m_1691aa9f-4546-4be8-80fe-8dd51a534d37_0.png", meaning: "Journey together, exploration, shared adventure", type: "minor", suit: "hearts" },
     { id: 30, name: "Three Spilled Cups", image: "hearts/6._Sepia_notebook_paper_aquarelle_boy_looking_at_three_spille_4c66a326-a2d9-4dba-8f2d-6cd026156e36_0.png", meaning: "Loss, disappointment, emotional release", type: "minor", suit: "hearts" },
-    { id: 35, name: "The Diving Dream", image: "hearts/Intro_Verse_In_the_quiet_lullaby_of_the_sea_I_dive_into_dream_fa645d7c-626a-435a-8158-1f4c618e0df3_2.png", meaning: "Subconscious exploration, diving deep, mystery", type: "minor", suit: "hearts" },
-    { id: 42, name: "Blooming Heart Variant", image: "hearts/botanical_celtic_tarot_card_of_The_Blooming_Heart_a_woman_who_ad3a2b60-b1b8-414f-a44d-1fb55ebf4fe2_0.png", meaning: "Heart opening, growth, botanical wisdom", type: "minor", suit: "hearts" },
+    { id: 35, name: "The Diving Dream", image: "hearts/Atlanteans_tarot_card_showcasing_a_water_chalice_bearer_in_an_5f61fb7c-74f3-475c-85d5-31afbd663bfe_2.png", meaning: "Subconscious exploration, diving deep, mystery", type: "minor", suit: "hearts" },
+    { id: 42, name: "Blooming Heart Variant", image: "hearts/botanical_celtic_tarot_card_of_The_Blooming_Heart_a_woman_who_504cc716-d820-4a75-9cb6-9a6aa2090fa0_0.png", meaning: "Heart opening, growth, botanical wisdom", type: "minor", suit: "hearts" },
 
     // ========== COINS SUIT (Earth/Material) - Existing Cards ==========
-    { id: 17, name: "The Moonlit Pool", image: "coins/2._Sepia_notebook_paper_aquarelle_moon_reflection_in_birdbath_0b054896-2cd3-48bf-b0ca-3f3a585a8f29_0.png", meaning: "Reflection, intuition, lunar wisdom", type: "major", suit: "coins" },
-    { id: 24, name: "Queen of Ennagrams", image: "coins/Lilys_clay_tarot_card_of_the_Queen_of_Ennagrams_grove_matron__a1606915-dc7f-4eb6-878d-b167833669de_0.png", meaning: "Wisdom, nurturing, understanding personality", type: "minor", suit: "coins" },
+    { id: 17, name: "The Moonlit Pool", image: "coins/Enneagram_major_arcana_3_The_Merkabah_Wheel_white_charcoal__g_906059ea-9608-40a2-9658-ed2606c3926e_0.png", meaning: "Reflection, intuition, lunar wisdom", type: "major", suit: "coins" },
+    { id: 24, name: "Queen of Ennagrams", image: "coins/top-down_felt_tarot_Queen_of_Ennagrams_felt_queen_cradles_cla_63fa695d-9b84-416e-9949-b32648a5397b_0.png", meaning: "Wisdom, nurturing, understanding personality", type: "minor", suit: "coins" },
     { id: 25, name: "Queen of Hearts", image: "coins/stop-motion_Queen_of_Ennagrams_rose-gold_queen_cradles_cheese_32e68519-5983-4fdf-85a2-d8e23a891c6d_3.png", meaning: "Emotional mastery, loving authority, tender strength", type: "minor", suit: "coins" },
 ];
 
@@ -555,6 +555,7 @@ class TarotApp {
         this.initMajorCarousel();
         this.initCommentSystem();
         this.initTipsCarousel();
+        this.initCompleteDeck();
     }
 
     initializeStorage() {
@@ -636,7 +637,7 @@ class TarotApp {
             item.className = 'gallery-item';
             item.innerHTML = `
                 <div class="gallery-item-image">
-                    <img src="images/cards/${card.image}" alt="${card.name}" loading="lazy">
+                    <img src="images/updatedCards/${card.image}" alt="${card.name}" loading="lazy">
                 </div>
                 <div class="gallery-item-info">
                     <div class="gallery-item-title">${card.name}</div>
@@ -705,7 +706,7 @@ class TarotApp {
             item.className = 'gallery-item';
             item.innerHTML = `
                 <div class="gallery-item-image">
-                    <img src="images/cards/${card.image}" alt="${card.name}" loading="lazy">
+                    <img src="images/updatedCards/${card.image}" alt="${card.name}" loading="lazy">
                 </div>
                 <div class="gallery-item-info">
                     <div class="gallery-item-title">${card.name}</div>
@@ -797,7 +798,7 @@ class TarotApp {
 
         slot.innerHTML = `
             <div class="card-front" style="cursor: pointer;" title="Click for full view">
-                <img src="images/cards/${card.image}" alt="${card.name}" class="daily-card-image">
+                <img src="images/updatedCards/${card.image}" alt="${card.name}" class="daily-card-image">
                 <div class="card-details">
                     <div class="card-name">${card.name}</div>
                     ${cardCategory ? `<div class="card-category">${cardCategory}</div>` : ''}
@@ -826,7 +827,7 @@ class TarotApp {
         // Get translations
         const t = translations[currentLanguage]?.cards || translations.en.cards;
 
-        image.src = `images/cards/${card.image}`;
+        image.src = `images/updatedCards/${card.image}`;
         image.alt = card.name;
         name.textContent = card.name;
         typeEl.textContent = cardCategory;
@@ -893,7 +894,7 @@ class TarotApp {
             const cardEl = document.createElement('div');
             cardEl.className = 'selectable-card';
             cardEl.innerHTML = `
-                <img src="images/cards/${card.image}" alt="${card.name}" class="selectable-card-img">
+                <img src="images/updatedCards/${card.image}" alt="${card.name}" class="selectable-card-img">
                 <div class="selectable-card-name">${card.name}</div>
             `;
             cardEl.addEventListener('click', () => {
@@ -1464,7 +1465,7 @@ class TarotApp {
         const item = this.currentGallery[this.currentLightboxIndex];
         if (!item) return;
 
-        const imgPath = `images/cards/${item.image}`;
+        const imgPath = `images/updatedCards/${item.image}`;
         const title = item.title || item.name;
 
         // Use visual description if available, otherwise use meaning/description
@@ -1747,6 +1748,108 @@ class TarotApp {
         }
     }
 
+    // Complete Deck Gallery
+    initCompleteDeck() {
+        this.currentDeckFilter = 'all';
+        this.renderCompleteDeck();
+
+        // Add filter tab event listeners
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                this.filterCompleteDeck(filter);
+
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+            });
+        });
+    }
+
+    renderCompleteDeck(filter = 'all') {
+        const container = document.getElementById('complete-deck-grid');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        // Get all cards
+        let cards = TAROT_CARDS;
+
+        // Apply filter
+        if (filter !== 'all') {
+            if (filter === 'aether') {
+                // Aether includes major arcana and cards with suit 'eather'
+                cards = cards.filter(card => card.type === 'major' || card.suit === 'eather');
+            } else {
+                cards = cards.filter(card => card.suit === filter);
+            }
+        }
+
+        // Get translations
+        const cardT = translations[currentLanguage]?.cards || translations.en.cards;
+
+        // Render cards
+        cards.forEach(card => {
+            const cardEl = document.createElement('div');
+            cardEl.className = 'deck-card-item';
+
+            // Determine suit display name
+            let suitDisplay = '';
+            if (card.type === 'major') {
+                suitDisplay = cardT.majorArcana || 'Major Arcana';
+            } else if (card.suit) {
+                const suitNames = {
+                    'roses': cardT.airMind || 'Air / Mind',
+                    'cards': cardT.fireWill || 'Fire / Will',
+                    'hearts': cardT.waterEmotion || 'Water / Emotion',
+                    'coins': cardT.earthMaterial || 'Earth / Material',
+                    'eather': cardT.fifthElement || 'Aether'
+                };
+                suitDisplay = suitNames[card.suit] || card.suit;
+            }
+
+            cardEl.innerHTML = `
+                <div class="deck-card-image">
+                    <img src="images/updatedCards/${card.image}" alt="${card.name}" loading="lazy">
+                </div>
+                <div class="deck-card-info">
+                    <div class="deck-card-name">${card.name}</div>
+                    <div class="deck-card-suit">${suitDisplay}</div>
+                </div>
+            `;
+
+            // Add click handler to open detail modal
+            cardEl.addEventListener('click', () => {
+                let cardCategory = '';
+                if (card.type === 'major') {
+                    cardCategory = card.number !== undefined
+                        ? `${cardT.majorArcana} ${card.number}`
+                        : cardT.majorArcana;
+                } else {
+                    const suitNames = {
+                        'roses': cardT.airMind,
+                        'cards': cardT.fireWill,
+                        'hearts': cardT.waterEmotion,
+                        'coins': cardT.earthMaterial,
+                        'eather': cardT.fifthElement || 'Aether'
+                    };
+                    const suitName = suitNames[card.suit] || card.suit;
+                    cardCategory = `${cardT.minorArcana} - ${suitName}`;
+                }
+                const reading = this.generateReflectionReading(card);
+                this.openCardDetailModal(card, 'reflection', cardCategory, reading, cardT.forReflection);
+            });
+
+            container.appendChild(cardEl);
+        });
+    }
+
+    filterCompleteDeck(filter) {
+        this.currentDeckFilter = filter;
+        this.renderCompleteDeck(filter);
+    }
+
     // Major Arcana Carousel
     initMajorCarousel() {
         this.renderMajorCarousel();
@@ -1765,9 +1868,10 @@ class TarotApp {
 
         const cardEl = document.createElement('div');
         cardEl.className = 'carousel-card';
+        cardEl.style.cursor = 'pointer';
         cardEl.innerHTML = `
             <div class="carousel-card-image">
-                <img src="images/cards/${card.image}" alt="${card.name}" loading="lazy">
+                <img src="images/updatedCards/${card.image}" alt="${card.name}" loading="lazy">
             </div>
             <div class="carousel-card-info">
                 <h3 class="carousel-card-title">${card.name}</h3>
@@ -1775,6 +1879,14 @@ class TarotApp {
                 <p class="carousel-card-number">${t.cardOf} ${this.majorCarouselIndex + 1} ${t.of} ${this.majorArcanaCards.length}</p>
             </div>
         `;
+
+        // Add click handler to open detail modal
+        cardEl.addEventListener('click', () => {
+            const cardT = translations[currentLanguage]?.cards || translations.en.cards;
+            const cardCategory = cardT.majorArcana;
+            const reading = this.generateReflectionReading(card);
+            this.openCardDetailModal(card, 'reflection', cardCategory, reading, cardT.forReflection);
+        });
 
         container.appendChild(cardEl);
     }
@@ -1808,9 +1920,10 @@ class TarotApp {
 
         const cardEl = document.createElement('div');
         cardEl.className = 'carousel-card';
+        cardEl.style.cursor = 'pointer';
         cardEl.innerHTML = `
             <div class="carousel-card-image">
-                <img src="images/cards/${card.image}" alt="${card.name}" loading="lazy">
+                <img src="images/updatedCards/${card.image}" alt="${card.name}" loading="lazy">
             </div>
             <div class="carousel-card-info">
                 <h3 class="carousel-card-title">${card.name}</h3>
@@ -1818,6 +1931,21 @@ class TarotApp {
                 <p class="carousel-card-number">${t.cardOf} ${this.minorCarouselIndex + 1} ${t.of} ${this.minorArcanaCards.length}</p>
             </div>
         `;
+
+        // Add click handler to open detail modal
+        cardEl.addEventListener('click', () => {
+            const cardT = translations[currentLanguage]?.cards || translations.en.cards;
+            const suitNames = {
+                'roses': cardT.airMind,
+                'cards': cardT.fireWill,
+                'hearts': cardT.waterEmotion,
+                'coins': cardT.earthMaterial
+            };
+            const suitName = suitNames[card.suit] || card.suit;
+            const cardCategory = `${cardT.minorArcana} - ${suitName}`;
+            const reading = this.generateReflectionReading(card);
+            this.openCardDetailModal(card, 'reflection', cardCategory, reading, cardT.forReflection);
+        });
 
         container.appendChild(cardEl);
     }
@@ -2067,6 +2195,7 @@ function updateTranslations() {
         window.tarotApp.renderMajorCarousel();
         window.tarotApp.renderMinorCarousel();
         window.tarotApp.renderCurrentTip();
+        window.tarotApp.renderCompleteDeck(window.tarotApp.currentDeckFilter || 'all');
     }
 }
 
