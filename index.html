@@ -10,7 +10,7 @@
     <!-- Header -->
     <header class="header" id="top">
         <nav class="nav">
-            <a href="#top" class="logo">
+            <a href="index.html" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return true;">
                 <img src="images/logo-text.png" alt="SunLight" class="logo-img">
                 <span class="logo-project-text" data-i18n="header.projectName">SunLight Project</span>
             </a>
@@ -56,14 +56,15 @@
 
         <!-- CTA Content -->
         <div class="parallax-content">
-            <h2 class="parallax-title" data-i18n="cta.title">Shape the Sunlight Tarot</h2>
-            <p class="parallax-subtitle" data-i18n="cta.subtitle">A collective, open-source tarot deck in the making. Help us choose the artwork that will guide the final cards.</p>
+            <h2 class="parallax-title" data-i18n="cta.title">The Sunlight Tarot Project</h2>
+            <p class="parallax-subtitle" data-i18n="cta.subtitle">An open-source tarot deck rebuilt around 5 elements. A fusion of ancient wisdom, practical field guide, and community creation.</p>
+            <p class="parallax-tagline" data-i18n="cta.tagline">Guided by Lily's Dreaming Diary</p>
             <div class="cta-actions">
-                <a href="#gallery" class="btn btn-cta btn-primary-cta" data-i18n="cta.voteBtn">Vote on Artwork</a>
+                <a href="#complete-deck" class="btn btn-cta btn-primary-cta" data-i18n="cta.voteBtn">Explore the Deck</a>
             </div>
 
             <p class="subscribers-count">
-                <span id="subscriber-count">0</span> <span data-i18n="cta.memberCount">community member</span> <span data-i18n="cta.memberSuffix">• Be part of the creation</span>
+                <span id="subscriber-count">0</span> <span data-i18n="cta.memberCount">community member</span> <span data-i18n="cta.memberSuffix">• Help us heal the tarot</span>
             </p>
 
             <!-- Slider Navigation Dots -->
@@ -115,21 +116,28 @@
         </div>
     </section>
 
-    <!-- Sunlight Tarot Deck -->
-    <section id="gallery" class="main-gallery">
+    <!-- Complete Deck Gallery -->
+    <section id="complete-deck" class="complete-deck-section">
         <div class="container">
-            <h2 data-i18n="gallery.title">Sunlight Tarot Deck 0.0.1</h2>
-            <p class="section-description" data-i18n="gallery.description">Explore the complete deck - Navigate through all cards</p>
-            <div class="gallery-navigation">
-                <button class="nav-btn" id="prev-page">&#10094; <span data-i18n="gallery.previous">Previous</span></button>
-                <span class="page-info"><span data-i18n="gallery.page">Page</span> <span id="current-page">1</span> <span data-i18n="gallery.of">of</span> <span id="total-pages">1</span></span>
-                <button class="nav-btn" id="next-page"><span data-i18n="gallery.next">Next</span> &#10095;</button>
+            <h2 data-i18n="completeDeck.title">Sunlight Tarot Deck 0.0.1</h2>
+            <p class="section-description" data-i18n="completeDeck.description">The entire deck rebuilt around 5 elements with a new inward journey for the Major Arcana.</p>
+
+            <!-- Filter Tabs -->
+            <div class="deck-filter-tabs">
+                <button class="filter-tab active" data-filter="all" data-i18n="completeDeck.all">All</button>
+                <button class="filter-tab" data-filter="aether" data-i18n="completeDeck.aether">Aether</button>
+                <button class="filter-tab" data-filter="roses" data-i18n="completeDeck.roses">Roses</button>
+                <button class="filter-tab" data-filter="cards" data-i18n="completeDeck.cards">Cards</button>
+                <button class="filter-tab" data-filter="hearts" data-i18n="completeDeck.hearts">Hearts</button>
+                <button class="filter-tab" data-filter="coins" data-i18n="completeDeck.coins">Coins</button>
             </div>
-            <div id="voting-gallery" class="gallery-grid"></div>
-            <div class="gallery-navigation">
-                <button class="nav-btn" id="prev-page-bottom">&#10094; <span data-i18n="gallery.previous">Previous</span></button>
-                <span class="page-info"><span data-i18n="gallery.page">Page</span> <span id="current-page-bottom">1</span> <span data-i18n="gallery.of">of</span> <span id="total-pages-bottom">1</span></span>
-                <button class="nav-btn" id="next-page-bottom"><span data-i18n="gallery.next">Next</span> &#10095;</button>
+
+            <!-- Deck Grid -->
+            <div id="complete-deck-grid" class="complete-deck-grid"></div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-load-more" id="load-more-cards" data-i18n="completeDeck.loadMore">Load More</button>
             </div>
         </div>
     </section>
@@ -321,49 +329,38 @@
         </div>
     </section>
 
-    <!-- Additional Galleries -->
+    <!-- Behind the Scenes -->
     <section id="galleries" class="galleries-section">
         <div class="container">
-            <h2 data-i18n="collections.title">Curated Collections</h2>
+            <h2 data-i18n="collections.title">Behind the Scenes</h2>
+            <p class="section-description" data-i18n="collections.description">Join in to build - sketches, versions, and work in progress</p>
 
             <div class="gallery-collection">
-                <h3 data-i18n="collections.majorTitle">Major Arcana</h3>
                 <div class="carousel-container">
-                    <button class="carousel-btn prev" id="major-prev">&#10094;</button>
-                    <div class="major-carousel" id="major-arcana-gallery"></div>
-                    <button class="carousel-btn next" id="major-next">&#10095;</button>
-                </div>
-            </div>
-
-            <div class="gallery-collection">
-                <h3 data-i18n="collections.minorTitle">Minor Arcana</h3>
-                <div class="carousel-container">
-                    <button class="carousel-btn prev" id="minor-prev">&#10094;</button>
-                    <div class="minor-carousel" id="minor-arcana-gallery"></div>
-                    <button class="carousel-btn next" id="minor-next">&#10095;</button>
+                    <button class="carousel-btn prev" id="behind-prev">&#10094;</button>
+                    <div class="behind-carousel" id="behind-scenes-gallery"></div>
+                    <button class="carousel-btn next" id="behind-next">&#10095;</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Complete Deck Gallery -->
-    <section id="complete-deck" class="complete-deck-section">
+    <!-- Full Gallery with Voting -->
+    <section id="gallery" class="main-gallery">
         <div class="container">
-            <h2 data-i18n="completeDeck.title">Complete Deck Gallery</h2>
-            <p class="section-description" data-i18n="completeDeck.description">Browse all 64 cards in the Sunlight Tarot deck</p>
-
-            <!-- Filter Tabs -->
-            <div class="deck-filter-tabs">
-                <button class="filter-tab active" data-filter="all" data-i18n="completeDeck.all">All</button>
-                <button class="filter-tab" data-filter="aether" data-i18n="completeDeck.aether">Aether</button>
-                <button class="filter-tab" data-filter="roses" data-i18n="completeDeck.roses">Roses</button>
-                <button class="filter-tab" data-filter="cards" data-i18n="completeDeck.cards">Cards</button>
-                <button class="filter-tab" data-filter="hearts" data-i18n="completeDeck.hearts">Hearts</button>
-                <button class="filter-tab" data-filter="coins" data-i18n="completeDeck.coins">Coins</button>
+            <h2 data-i18n="gallery.title">Vote on Your Favorites</h2>
+            <p class="section-description" data-i18n="gallery.description">Help us choose the final artwork for the deck</p>
+            <div class="gallery-navigation">
+                <button class="nav-btn" id="prev-page">&#10094; <span data-i18n="gallery.previous">Previous</span></button>
+                <span class="page-info"><span data-i18n="gallery.page">Page</span> <span id="current-page">1</span> <span data-i18n="gallery.of">of</span> <span id="total-pages">1</span></span>
+                <button class="nav-btn" id="next-page"><span data-i18n="gallery.next">Next</span> &#10095;</button>
             </div>
-
-            <!-- Deck Grid -->
-            <div id="complete-deck-grid" class="complete-deck-grid"></div>
+            <div id="voting-gallery" class="gallery-grid"></div>
+            <div class="gallery-navigation">
+                <button class="nav-btn" id="prev-page-bottom">&#10094; <span data-i18n="gallery.previous">Previous</span></button>
+                <span class="page-info"><span data-i18n="gallery.page">Page</span> <span id="current-page-bottom">1</span> <span data-i18n="gallery.of">of</span> <span id="total-pages-bottom">1</span></span>
+                <button class="nav-btn" id="next-page-bottom"><span data-i18n="gallery.next">Next</span> &#10095;</button>
+            </div>
         </div>
     </section>
 

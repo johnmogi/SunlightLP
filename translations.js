@@ -16,12 +16,13 @@ const translations = {
         },
         // CTA Section
         cta: {
-            title: "Lily's Guide to the Sunlight Tarot",
-            subtitle: "Time to heal the tarot deck and explore new boundaries. Lily is your field guide to a completely reimagined tarot experience.",
+            title: "The Sunlight Tarot Project",
+            subtitle: "An open-source tarot deck rebuilt around 5 elements. A fusion of ancient wisdom, practical field guide, and community creation.",
+            tagline: "Guided by Lily's Dreaming Diary",
             voteBtn: "Explore the Deck",
-            joinBtn: "Keep Me in the Loop",
+            joinBtn: "Join the Build",
             memberCount: "community member",
-            memberSuffix: "• Be part of the creation"
+            memberSuffix: "• Help us heal the tarot"
         },
         // Registration Form
         form: {
@@ -91,9 +92,8 @@ const translations = {
         },
         // Collections
         collections: {
-            title: "Curated Collections",
-            majorTitle: "Major Arcana",
-            minorTitle: "Minor Arcana"
+            title: "Behind the Scenes",
+            description: "Join in to build - sketches, versions, and work in progress"
         },
         // About Section Tabs
         aboutTabs: {
@@ -167,13 +167,14 @@ const translations = {
         // Complete Deck Gallery
         completeDeck: {
             title: "Sunlight Tarot Deck 0.0.1",
-            description: "The entire deck rebuilt around 5 elements with a new inward journey for the Major Arcana. Explore all cards and vote for your favorites.",
+            description: "The entire deck rebuilt around 5 elements with a new inward journey for the Major Arcana.",
             all: "All",
             aether: "Aether",
             roses: "Roses",
             cards: "Cards",
             hearts: "Hearts",
-            coins: "Coins"
+            coins: "Coins",
+            loadMore: "Load More"
         }
     },
 
@@ -192,12 +193,13 @@ const translations = {
         },
         // CTA Section
         cta: {
-            title: "המדריכה של לילי לטארוט אור-השמש",
-            subtitle: "הגיע הזמן לרפא את חפיסת הטארוט ולחקור גבולות חדשים. לילי היא המדריכה שלכם לחוויית טארוט מחודשת לחלוטין.",
+            title: "פרויקט טארוט אור-השמש",
+            subtitle: "חפיסת טארוט בקוד פתוח שנבנתה מחדש סביב 5 יסודות. מיזוג של חוכמה עתיקה, מדריך מעשי ויצירה קהילתית.",
+            tagline: "בהנחיית יומן החלומות של לילי",
             voteBtn: "חקרו את החפיסה",
-            joinBtn: "עדכנו אותי",
+            joinBtn: "הצטרפו לבנייה",
             memberCount: "חבר קהילה",
-            memberSuffix: "• אתם חלק מהיצירה"
+            memberSuffix: "• עזרו לנו לרפא את הטארוט"
         },
         // Registration Form
         form: {
@@ -267,9 +269,8 @@ const translations = {
         },
         // Collections
         collections: {
-            title: "אוספים מודרכים",
-            majorTitle: "ארקנה גבוה",
-            minorTitle: "ארקנה נמוך"
+            title: "מאחורי הקלעים",
+            description: "הצטרפו לבנייה - סקיצות, גרסאות ועבודה בתהליך"
         },
         // About Section Tabs
         aboutTabs: {
@@ -343,13 +344,14 @@ const translations = {
         // Complete Deck Gallery
         completeDeck: {
             title: "חפיסת טארוט אור-השמש 0.0.1",
-            description: "החפיסה כולה נבנתה מחדש סביב 5 יסודות עם מסע פנימי חדש לארקנה הגדולה. חקרו את כל הקלפים והצביעו למועדפים שלכם.",
+            description: "החפיסה כולה נבנתה מחדש סביב 5 יסודות עם מסע פנימי חדש לארקנה הגדולה.",
             all: "הכל",
             aether: "אתר",
             roses: "ורדים",
             cards: "קלפים",
             hearts: "לבבות",
-            coins: "מטבעות"
+            coins: "מטבעות",
+            loadMore: "טען עוד"
         }
     },
 

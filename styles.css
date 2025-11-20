@@ -946,7 +946,7 @@ section h2 {
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 60px; /* Account for fixed header */
 }
 
@@ -1011,14 +1011,21 @@ section h2 {
     z-index: 3;
     text-align: left;
     color: var(--text-light);
-    max-width: 900px;
-    padding: 1.5rem 3rem;
+    max-width: 550px;
+    padding: 2rem 2.5rem;
+    margin-left: 5%;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
     animation: fadeInUp 1s ease-out;
 }
 
 /* RTL text alignment for Hebrew */
 body[dir="rtl"] .parallax-content {
     text-align: right;
+    margin-left: auto;
+    margin-right: 5%;
 }
 
 @keyframes fadeInUp {
@@ -1033,21 +1040,30 @@ body[dir="rtl"] .parallax-content {
 }
 
 .parallax-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--text-light);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     font-weight: bold;
     letter-spacing: 1px;
+    line-height: 1.1;
 }
 
 .parallax-subtitle {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     opacity: 0.9;
     line-height: 1.5;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     max-width: 600px;
+}
+
+.parallax-tagline {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.75;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Subscriber Count in CTA */
@@ -2542,6 +2558,38 @@ body[dir="rtl"] .lightbox-comments {
     font-size: 0.75rem;
 }
 
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-load-more {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-load-more:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-load-more:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-load-more.hidden {
+    display: none;
+}
+
 /* Card Detail Modal Navigation */
 .card-detail-nav {
     position: absolute;
@@ -2572,6 +2620,92 @@ body[dir="rtl"] .lightbox-comments {
 
 .card-detail-next {
     right: 1rem;
+}
+
+/* Detail Modal Comments */
+.detail-comments {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-comments h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.detail-comments-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+}
+
+.detail-comments-list .comment {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.detail-comments-list .comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.detail-comments-list .comment-author {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.detail-comments-list .comment-date {
+    opacity: 0.7;
+}
+
+.detail-comments-list .comment-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.detail-comments-list .no-comments {
+    opacity: 0.6;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+}
+
+.detail-comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.detail-comment-form input,
+.detail-comment-form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 0.6rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.detail-comment-form input::placeholder,
+.detail-comment-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.detail-comment-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.detail-comment-form .btn-submit {
+    align-self: flex-end;
+    padding: 0.5rem 1.5rem;
 }
 
 /* Responsive Grid for Complete Deck */

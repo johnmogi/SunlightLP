@@ -842,6 +842,9 @@ class TarotApp {
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+        // Load comments for this card
+        this.loadDetailComments(card.id);
     }
 
     closeCardDetailModal() {
@@ -902,6 +905,92 @@ class TarotApp {
             readingContent = `<p><strong>${cardT.imagery}</strong> ${card.visualDesc}</p>` + readingContent;
         }
         readingEl.innerHTML = readingContent;
+
+        // Load comments for this card
+        this.loadDetailComments(card.id);
+    }
+
+    loadDetailComments(cardId) {
+        const container = document.getElementById('detail-comments-list');
+        const cardIdInput = document.getElementById('detail-comment-card-id');
+        if (!container) return;
+
+        // Set current card ID for form
+        if (cardIdInput) cardIdInput.value = cardId;
+
+        // Get comments from localStorage
+        const comments = JSON.parse(localStorage.getItem('cardComments') || '{}');
+        const cardComments = comments[cardId] || [];
+
+        if (cardComments.length === 0) {
+            const t = translations[currentLanguage]?.comments || translations.en.comments;
+            container.innerHTML = `<p class="no-comments">${t.noComments}</p>`;
+            return;
+        }
+
+        // Sort by date (newest first)
+        cardComments.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        container.innerHTML = cardComments.map(comment => `
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">${this.escapeHtml(comment.name)}</span>
+                    <span class="comment-date">${new Date(comment.date).toLocaleDateString()}</span>
+                </div>
+                <p class="comment-text">${this.escapeHtml(comment.text)}</p>
+            </div>
+        `).join('');
+    }
+
+    handleDetailCommentSubmit(e) {
+        e.preventDefault();
+
+        const cardId = document.getElementById('detail-comment-card-id').value;
+        const name = document.getElementById('detail-comment-name').value.trim();
+        const text = document.getElementById('detail-comment-text').value.trim();
+        const messageEl = document.getElementById('detail-comment-message');
+
+        const t = translations[currentLanguage]?.comments || translations.en.comments;
+
+        if (!name || !text) {
+            messageEl.textContent = t.errorFields;
+            messageEl.className = 'form-message error';
+            return;
+        }
+
+        // Get existing comments
+        const comments = JSON.parse(localStorage.getItem('cardComments') || '{}');
+        if (!comments[cardId]) comments[cardId] = [];
+
+        // Add new comment
+        comments[cardId].push({
+            name,
+            text,
+            date: new Date().toISOString()
+        });
+
+        // Save to localStorage
+        localStorage.setItem('cardComments', JSON.stringify(comments));
+
+        // Clear form
+        document.getElementById('detail-comment-name').value = '';
+        document.getElementById('detail-comment-text').value = '';
+
+        // Show success message
+        messageEl.textContent = t.success;
+        messageEl.className = 'form-message success';
+        setTimeout(() => {
+            messageEl.className = 'form-message';
+        }, 3000);
+
+        // Reload comments
+        this.loadDetailComments(cardId);
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
     }
 
     generateReflectionReading(card) {
@@ -1069,6 +1158,12 @@ class TarotApp {
             if (e.key === 'ArrowLeft') this.navigateDetailModal(-1);
             if (e.key === 'ArrowRight') this.navigateDetailModal(1);
         });
+
+        // Detail comment form submission
+        const detailCommentForm = document.getElementById('detail-comment-form');
+        if (detailCommentForm) {
+            detailCommentForm.addEventListener('submit', (e) => this.handleDetailCommentSubmit(e));
+        }
     }
 
     handleVote(imageId) {
@@ -1824,6 +1919,7 @@ class TarotApp {
     // Complete Deck Gallery
     initCompleteDeck() {
         this.currentDeckFilter = 'all';
+        this.deckCardsShown = 10; // Show 2 rows initially (5 cols x 2 rows)
         this.renderCompleteDeck();
 
         // Add filter tab event listeners
@@ -1831,6 +1927,7 @@ class TarotApp {
         filterTabs.forEach(tab => {
             tab.addEventListener('click', (e) => {
                 const filter = e.target.dataset.filter;
+                this.deckCardsShown = 10; // Reset to initial amount
                 this.filterCompleteDeck(filter);
 
                 // Update active tab
@@ -1838,6 +1935,15 @@ class TarotApp {
                 e.target.classList.add('active');
             });
         });
+
+        // Load More button
+        const loadMoreBtn = document.getElementById('load-more-cards');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                this.deckCardsShown += 10; // Load 2 more rows
+                this.renderCompleteDeck(this.currentDeckFilter);
+            });
+        }
     }
 
     renderCompleteDeck(filter = 'all') {
@@ -1862,12 +1968,26 @@ class TarotApp {
         // Store filtered cards for modal navigation
         this.completeDeckCards = cards;
 
+        // Limit cards shown
+        const cardsToShow = cards.slice(0, this.deckCardsShown);
+        const hasMore = cards.length > this.deckCardsShown;
+
+        // Update Load More button visibility
+        const loadMoreBtn = document.getElementById('load-more-cards');
+        if (loadMoreBtn) {
+            if (hasMore) {
+                loadMoreBtn.classList.remove('hidden');
+            } else {
+                loadMoreBtn.classList.add('hidden');
+            }
+        }
+
         // Get translations
         const cardT = translations[currentLanguage]?.cards || translations.en.cards;
         const t = translations[currentLanguage]?.voting || translations.en.voting;
 
         // Render cards
-        cards.forEach((card, index) => {
+        cardsToShow.forEach((card, index) => {
             const cardEl = document.createElement('div');
             cardEl.className = 'deck-card-item';
 
