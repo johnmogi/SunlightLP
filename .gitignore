@@ -1,6 +1,8 @@
 # Dependencies
 images/
 images/*
+images2/
+images2/*
 images/updatedCards
 
 node_modules/
