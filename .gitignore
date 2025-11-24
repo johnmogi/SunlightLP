@@ -4,6 +4,7 @@ images/*
 images2/
 images2/*
 images/updatedCards
+images2/updatedCards
 
 node_modules/
 backend/node_modules/
