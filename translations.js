@@ -62,12 +62,16 @@ const translations = {
             chooseBtn: "Choose Activation",
             modalTitle: "Choose Your Activation Card",
             tips: [
-                "Breathe slowly and deeply while gazing at your card",
-                "Speak the card's name and meaning aloud three times",
-                "Write down the first thoughts that come to mind",
-                "Close your eyes and visualize yourself inside the card",
-                "Ask the card: 'What do you want me to know today?'",
-                "Notice which colors or symbols draw your attention first"
+                "💭 Reflection Card: Randomly drawn to show what requires your contemplation today. If it doesn't resonate, draw another until you find your match.",
+                "⚡ Activation Card: Choose consciously - this is the energy you'll embody and act from today.",
+                "🔄 To Reselect: Simply click 'Draw Reflection' or 'Choose Activation' again to get a new card that better resonates with you.",
+                "🌬️ Breathe slowly and deeply while gazing at your card. Let the imagery speak to your subconscious.",
+                "🗣️ Speak the card's name and meaning aloud three times to anchor the energy.",
+                "✍️ Write down the first thoughts that come to mind - these are often the most truthful.",
+                "👁️ Close your eyes and visualize yourself inside the card. What do you see? How do you feel?",
+                "❓ Ask the card: 'What do you want me to know today?' Listen for the answer.",
+                "🎨 Notice which colors or symbols draw your attention first - they hold personal meaning.",
+                "🔮 Reflection is passive (receive wisdom), Activation is active (embody and express energy)."
             ]
         },
         // Footer
@@ -239,12 +243,16 @@ const translations = {
             chooseBtn: "בחרו הפעלה",
             modalTitle: "בחרו את קלף ההפעלה שלכם",
             tips: [
-                "נשמו לאט ועמוק תוך התבוננות בקלף שלכם",
-                "אמרו בקול את שם הקלף ומשמעותו שלוש פעמים",
-                "כתבו את המחשבות הראשונות שעולות לכם",
-                "עצמו עיניים ודמיינו את עצמכם בתוך הקלף",
-                "שאלו את הקלף: 'מה אתה רוצה שאדע היום?'",
-                "שימו לב לאילו צבעים או סמלים מושכים את תשומת לבכם ראשונים"
+                "💭 קלף השתקפות: נשלף באקראי כדי להראות מה דורש התבוננות היום. אם לא מהדהד, שלפו קלף נוסף עד שתמצאו התאמה.",
+                "⚡ קלף הפעלה: בחרו במודע - זו האנרגיה שתגלמו ותפעלו ממנה היום.",
+                "🔄 בחירה מחדש: פשוט לחצו על 'שלפו השתקפות' או 'בחרו הפעלה' שוב כדי לקבל קלף חדש שמהדהד יותר.",
+                "🌬️ נשמו לאט ועמוק תוך התבוננות בקלף. תנו לדימויים לדבר אל תת-המודע שלכם.",
+                "🗣️ אמרו בקול את שם הקלף ומשמעותו שלוש פעמים כדי לעגן את האנרגיה.",
+                "✍️ כתבו את המחשבות הראשונות שעולות - לרוב הן הכי אמיתיות.",
+                "👁️ עצמו עיניים ודמיינו את עצמכם בתוך הקלף. מה אתם רואים? איך אתם מרגישים?",
+                "❓ שאלו את הקלף: 'מה אתה רוצה שאדע היום?' הקשיבו לתשובה.",
+                "🎨 שימו לב לאילו צבעים או סמלים מושכים את תשומת לבכם ראשונים - יש להם משמעות אישית.",
+                "🔮 השתקפות היא פסיבית (קבלת חכמה), הפעלה היא אקטיבית (גילום והבעת אנרגיה)."
             ]
         },
         // Footer

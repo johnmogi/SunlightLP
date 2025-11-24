@@ -1941,9 +1941,29 @@ body[dir="rtl"] .lightbox-comments {
 
 /* Scroll Maze Preview Section */
 .scroll-maze-preview {
-    background: linear-gradient(135deg, #2a1f4e 0%, #1a1a2e 50%, #2a2a3e 100%);
+    position: relative;
+    background-image: url('images/johnmogi_Board_game_box_cover_for_Scroll_Maze_showing_adventu_5bbb7593-3e14-4876-982d-da7e56b9b943_2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 5rem 0;
     color: var(--text-light);
+}
+
+.scroll-maze-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(42, 31, 78, 0.85) 0%, rgba(26, 26, 46, 0.9) 50%, rgba(42, 42, 62, 0.85) 100%);
+    z-index: 1;
+}
+
+.scroll-maze-preview .container {
+    position: relative;
+    z-index: 2;
 }
 
 .scroll-maze-preview h2 {
