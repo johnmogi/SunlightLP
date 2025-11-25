@@ -62,10 +62,10 @@
             <p class="parallax-subtitle" data-i18n="cta.subtitle">An open-source tarot deck rebuilt around 5 elements. A fusion of ancient wisdom, practical field guide, and community creation.</p>
             <p class="parallax-tagline" data-i18n="cta.tagline">Guided by Lily's Dreaming Diary</p>
             <div class="cta-actions">
-                <a href="#complete-deck" class="btn btn-cta btn-primary-cta" data-i18n="cta.voteBtn">Explore the Deck</a>
+                <button id="cta-join-btn" class="btn btn-cta btn-primary-cta" data-i18n="cta.joinBtn">Join the Build</button>
             </div>
 
-            <p class="subscribers-count">
+            <p class="subscribers-count" id="subscriber-count-cta">
                 <span id="subscriber-count">0</span> <span data-i18n="cta.memberCount">community member</span> <span data-i18n="cta.memberSuffix">• Help us heal the tarot</span>
             </p>
 
@@ -108,7 +108,14 @@
                     <div class="form-group checkbox-group">
                         <label>
                             <input type="checkbox" id="reg-newsletter" name="newsletter" checked>
-                            <span>Send me weekly tarot insights</span>
+                            <span data-i18n="form.newsletterLabel">Send me weekly tarot insights</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="reg-volunteer" name="volunteer">
+                            <span data-i18n="form.volunteerLabel">I'm interested in volunteering my skills (artist, writer, developer, etc.)</span>
                         </label>
                     </div>
 
@@ -260,6 +267,34 @@
             <div class="maze-cta">
                 <p data-i18n="scrollMaze.stretchGoal">Stretch goal for our crowdfunding campaign - help us bring this vision to life!</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Join the Build Section -->
+    <section id="join-the-build" class="join-section">
+        <div class="container">
+            <h2 data-i18n="join.title">Join the Sunlight</h2>
+            <p class="section-description" data-i18n="join.description">Sunlight is an open-source project to co-create a tarot deck that's positive, healing, and empowering. We believe in the power of community to build beautiful things. If you're an artist, a writer, a developer, or just passionate about tarot, we invite you to help us build.</p>
+            <a href="docs/CONTRIBUTING.md" class="btn btn-primary-cta" data-i18n="join.button">Join the Build</a>
+        </div>
+    </section>
+
+    <!-- Manga Deck Gallery -->
+    <section id="manga-gallery" class="manga-gallery-section">
+        <div class="container">
+            <h2>Manga Deck Preview</h2>
+            <p class="section-description">A new take on the Sunlight Tarot, in a vibrant manga style. Should we make this a full deck? Let us know!</p>
+            <div id="manga-gallery-grid" class="gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- Coloring Book Teaser Section -->
+    <section id="coloring-book-teaser" class="coloring-book-teaser-section">
+        <div class="container">
+            <h2>Coming Soon: The SunLight Coloring Book!</h2>
+            <p class="section-description">Unleash your creativity and bring the magic of the Sunlight Tarot to life with our upcoming coloring book. Featuring intricate line art of your favorite cards, it's a meditative journey for all ages.</p>
+            <img src="midjourney_sessionmmangabW/coloring_book_tarot_card_Lili_seated_on_moon_cliff_reading_bo_710b69a3-89de-48f3-991d-30adb4b3114e_3.png" alt="Coloring Book Teaser" class="teaser-image">
+            <p class="coming-soon-text">Stay tuned for release dates and exclusive sneak peeks!</p>
         </div>
     </section>
 

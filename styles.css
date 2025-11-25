@@ -585,9 +585,9 @@ section h2 {
     flex: 1;
     min-height: 80px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
     border-right: 4px solid var(--secondary-color);
 }
 
@@ -690,7 +690,6 @@ section h2 {
     color: var(--text-dark);
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1998,7 +1997,6 @@ body[dir="rtl"] .lightbox-comments {
     text-align: center;
     transition: var(--transition);
 }
-
 .maze-feature:hover {
     transform: translateY(-5px);
     border-color: var(--secondary-color);
@@ -2347,8 +2345,6 @@ body[dir="rtl"] .lightbox-comments {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2621,8 +2617,6 @@ body[dir="rtl"] .lightbox-comments {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2778,4 +2772,83 @@ body[dir="rtl"] .lightbox-comments {
     .deck-card-suit {
         font-size: 0.6rem;
     }
+}
+
+/* Join the Build Section */
+.join-section {
+    background-color: #f4f0f9; /* A very light purple */
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.join-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.join-section .section-description {
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.join-section .btn-primary-cta {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Manga Gallery Section */
+.manga-gallery-section {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.manga-gallery-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Coloring Book Teaser Section */
+.coloring-book-teaser-section {
+    background: linear-gradient(135deg, #fceabb, #f8b500); /* Warm gradient */
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.coloring-book-teaser-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #8b4513; /* Earthy brown */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.coloring-book-teaser-section .section-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    color: #4a2c00;
+}
+
+.coloring-book-teaser-section .teaser-image {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.coloring-book-teaser-section .coming-soon-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #a0522d; /* Sienna */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }

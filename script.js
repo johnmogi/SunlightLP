@@ -544,6 +544,14 @@ const BEHIND_SCENES_IMAGES = [
     { id: 'b8', title: 'Lily\'s Hand', description: 'Botanical noir - flipping pages', image: 'versions/botanical_noir_ad_Lilys_hand_flips_ember-stained_page_pressed_b2350b21-340a-4faa-b381-1a6f6edff813_1.jpg' },
 ];
 
+const MANGA_CARDS = [
+    { id: 'm1', name: 'Manga Sun', image: 'midjourney_sessionmangaC/0_-_The_Sun_Four_Angels_orbiting_the_Feminine_Sun_Radiant_liv_c77b17b0-ad3f-4853-8838-d343172df373_1.png', meaning: 'A new style of sun.' },
+    { id: 'm2', name: 'Manga Ace of Cards', image: 'midjourney_sessionmangaC/Ace_of_Cards_-_The_Mirror_Tablet_Proud_Maya-Inca_youth_13-15__ef9eeacb-7e89-4740-83a2-862d6af3a64d_3.png', meaning: 'Creative fire in a new light.' },
+    { id: 'm3', name: 'Manga Ace of Coins', image: 'midjourney_sessionmangaC/Ace_of_Coins_-_Earth_Solar_Bread_Bearer_Cheerful_young_angel-_c56335c7-d030-470f-ac3c-6dd5bb42eb05_3.png', meaning: 'Material world with a new perspective.' },
+    { id: 'm4', name: 'Manga Ace of Hearts', image: 'midjourney_sessionmangaC/Ace_of_Hearts_Blonde_Atlantean-Viking_girl_9-11_pale_skin_lon_ea0e9f73-0b88-40e0-9670-1b0ccb7f45cf_3.png', meaning: 'Emotions in a different style.' },
+    { id: 'm5', name: 'Manga Ace of Roses', image: 'midjourney_sessionmangaC/Ace_of_Roses_-_The_Excalibur_Rose_Young_Egyptian-gypsy_boy_br_c8683878-8403-43ab-a07e-880fa26f8e1c_0.png', meaning: 'The power of mind, reimagined.' },
+];
+
 // Initialize app
 class TarotApp {
     constructor() {
@@ -610,8 +618,30 @@ class TarotApp {
     render() {
         this.renderVotingGallery(this.currentPage);
         this.renderAdditionalGalleries();
+        this.renderMangaGallery();
         this.renderSubscriberCount();
         this.checkDailySpread();
+    }
+
+    renderMangaGallery() {
+        const container = document.getElementById('manga-gallery-grid');
+        if (!container) return;
+
+        container.innerHTML = '';
+        MANGA_CARDS.forEach(card => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.innerHTML = `
+                <div class="gallery-item-image">
+                    <img src="${card.image}" alt="${card.name}" loading="lazy">
+                </div>
+                <div class="gallery-item-info">
+                    <div class="gallery-item-title">${card.name}</div>
+                    <div class="gallery-item-description">${card.meaning}</div>
+                </div>
+            `;
+            container.appendChild(item);
+        });
     }
 
     // Voting Gallery with Pagination - All Cards
@@ -1170,6 +1200,11 @@ class TarotApp {
             detailNext.addEventListener('click', () => this.navigateDetailModal(1));
         }
 
+        const ctaJoinBtn = document.getElementById('cta-join-btn');
+        if (ctaJoinBtn) {
+            ctaJoinBtn.addEventListener('click', () => this.openRegistrationForm());
+        }
+
         // Keyboard navigation for detail modal
         document.addEventListener('keydown', (e) => {
             const modal = document.getElementById('card-detail-modal');
@@ -1276,6 +1311,12 @@ class TarotApp {
         return newArray;
     }
 
+    openRegistrationForm() {
+        const formContainer = document.getElementById('registration-form');
+        formContainer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
     // Parallax Slider Methods
     initParallaxSlider() {
         const slides = document.querySelectorAll('.parallax-slide');
@@ -1303,21 +1344,22 @@ class TarotApp {
         const closeBtn = document.getElementById('close-registration');
         const formContainer = document.getElementById('registration-form');
 
-        const openRegistrationForm = () => {
-            formContainer.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        };
-
         if (toggleBtn) {
-            toggleBtn.addEventListener('click', openRegistrationForm);
+            toggleBtn.addEventListener('click', () => this.openRegistrationForm());
         }
 
         if (headerBtn) {
-            headerBtn.addEventListener('click', openRegistrationForm);
+            headerBtn.addEventListener('click', () => this.openRegistrationForm());
         }
 
         if (footerBtn) {
-            footerBtn.addEventListener('click', openRegistrationForm);
+            footerBtn.addEventListener('click', () => this.openRegistrationForm());
+        }
+
+        const subscriberCta = document.getElementById('subscriber-count-cta');
+        if (subscriberCta) {
+            subscriberCta.style.cursor = 'pointer';
+            subscriberCta.addEventListener('click', () => this.openRegistrationForm());
         }
 
         if (closeBtn) {
@@ -1441,6 +1483,7 @@ class TarotApp {
         const name = document.getElementById('reg-name').value.trim();
         const email = document.getElementById('reg-email').value.trim().toLowerCase();
         const newsletter = document.getElementById('reg-newsletter').checked;
+        const volunteer = document.getElementById('reg-volunteer').checked;
         const honeypot = document.getElementById('reg-website').value;
 
         // Honeypot check - if filled, it's a bot
@@ -1521,6 +1564,7 @@ class TarotApp {
             name,
             email,
             newsletter,
+            volunteer,
             timestamp: new Date().toISOString()
         };
 
@@ -2466,8 +2510,9 @@ function updateTranslations() {
     // Update subscriber count text
     const countSpan = document.getElementById('subscriber-count');
     if (countSpan && countSpan.parentElement) {
-        const currentCount = countSpan.textContent;
-        countSpan.parentElement.innerHTML = `<span id="subscriber-count">${currentCount}</span> ${t.cta.memberCount} ${t.cta.memberSuffix}`;
+        const currentCount = parseInt(countSpan.textContent);
+        const memberText = currentCount === 1 ? t.cta.memberCountSingular : t.cta.memberCountPlural;
+        countSpan.parentElement.innerHTML = `<span id="subscriber-count">${currentCount}</span> ${memberText} ${t.cta.memberSuffix}`;
     }
 
     // Re-render dynamic content with new translations
